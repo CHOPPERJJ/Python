@@ -7,7 +7,7 @@
     "tasks": [
         {
             "taskName": "Run py3 File",
-            "command": "/usr/bin/python3.6 ${file}",
+            "command": "/usr/bin/python2.7 ${file}",
             "type": "shell",
             "group": {
                 "kind": "build",
