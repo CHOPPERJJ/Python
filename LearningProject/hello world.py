@@ -46,3 +46,13 @@ def quadratic_equation(a, b, c):
 
 print quadratic_equation(2, 3, 0)
 print quadratic_equation(1, -6, 5)
+
+
+# python递归函数
+def fact(n):
+    if n == 1:
+        return 1
+    return n * fact(n - 1)
+
+
+print fact(5)
