@@ -26,8 +26,8 @@ def square_of_sum(L):
     return sum(i * i for i in L)
 
 
-print square_of_sum([1, 2, 3, 4, 5])
-print square_of_sum([-5, 0, 5, 15, 25])
+print (square_of_sum([1, 2, 3, 4, 5]))
+print (square_of_sum([-5, 0, 5, 15, 25]))
 
 # 定义一个函数quadratic(a, b, c)，接收3个参数，返回一元二次方程的两个解
 # ax2 + bx + c = 0
@@ -44,8 +44,8 @@ def quadratic_equation(a, b, c):
         return none
 
 
-print quadratic_equation(2, 3, 0)
-print quadratic_equation(1, -6, 5)
+print (quadratic_equation(2, 3, 0))
+print (quadratic_equation(1, -6, 5))
 
 
 # python递归函数
@@ -55,4 +55,7 @@ def fact(n):
     return n * fact(n - 1)
 
 
-print fact(5)
+print (fact(5))
+
+
+
