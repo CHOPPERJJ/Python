@@ -2,11 +2,7 @@
 # 遍历set,set中为tuple的项目，x[0]访问第一项，x[1]访问第二项
 s = set([('Adam', 95), ('Lisa', 85), ('Bart', 59)])
 for x in s:
-<<<<<<< HEAD
     print(x[0], ':', x[1])
-=======
-    print (x[0], ':', x[1])
->>>>>>> 1ecd9dbb021578ae5e1aa7c8628cff8e619a42b6
 
 # 更新set或者删除set中的元素
 s = set(['Adam', 'Lisa', 'Paul'])
@@ -84,10 +80,40 @@ print(average(1, 2))
 print(average(1, 2, 2, 3, 4, ))
 
 # list和tuple切片
+# L = [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10，11--------100]
 L = range(1, 101)
-W = []
-print(list(L[:11]))
-for i in L:
-    x = L[i]
-    if x % 3 == 0:
-        W.append(x)
+# 从索引0开始到索引10-1，取出10-0个元素
+print(list(L[0:10]))
+# 从索引2开始到结束，每隔3-1个元素取出
+print(list(L[2::3]))
+# 从索引4开始到索引50，每隔5-1个元素取出
+print(list(L[4:50:5]))
+# 从索引-10开始到索引-1，取出元素
+print(list(L[-10:]))
+# 从索引-10-1开始到索引结束，取出元素
+print(list(L[:-10]))
+
+
+# 字符串切片练习，设计一个函数，它接受一个字符串，然后返回一个仅首字母变成大写的字符串。
+def firstCharUpper(s):
+    s1 = s[0].upper()
+    s2 = s[1:]
+    return s1 + s2
+
+
+print(firstCharUpper('hello'))
+print(firstCharUpper('sunday'))
+print(firstCharUpper('september'))
+
+
+# python的迭代就是for循环
+for i in range(1, 101):
+    if i % 7 == 0:
+        print(i)
+
+# 迭代函数enumerate()使用方法
+L = ['Adam', 'Lisa', 'Bart', 'Paul']
+t = zip(range(1, 5), L)
+for rank, name in enumerate(t):
+    print(rank, '-', name)
+
