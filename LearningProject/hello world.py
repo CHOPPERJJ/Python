@@ -1,4 +1,5 @@
 # coding=utf-8
+# 入门Python
 # 遍历set,set中为tuple的项目，x[0]访问第一项，x[1]访问第二项
 s = set([('Adam', 95), ('Lisa', 85), ('Bart', 59)])
 for x in s:
@@ -105,7 +106,6 @@ print(firstCharUpper('hello'))
 print(firstCharUpper('sunday'))
 print(firstCharUpper('september'))
 
-
 # python的迭代就是for循环
 for i in range(1, 101):
     if i % 7 == 0:
@@ -113,7 +113,51 @@ for i in range(1, 101):
 
 # 迭代函数enumerate()使用方法
 L = ['Adam', 'Lisa', 'Bart', 'Paul']
-t = zip(range(1, 5), L)
-for rank, name in enumerate(t):
-    print(rank, '-', name)
+t = zip(range(1, len(L) + 1), L)
+for rank, name in t:
+    print(rank, '--', name)
 
+# values()和itervalues()方法都可以迭代dict,只是实现方式不
+# 练习dict计算所有同学的平均分。
+d = {'Adam': 95, 'Lisa': 85, 'Bart': 59, 'Paul': 74}
+avg = (sum(d.values()) + 0.0) / len(d.values())
+print(avg)
+
+# 迭代dict的key和value
+d = {'Adam': 95, 'Lisa': 85, 'Bart': 59, 'Paul': 74}
+for name, score in d.items():
+    print(name, ':', score)
+avg = (sum(d.values()) + 0.0) / len(d.values())
+print('average', ':', avg)
+
+# 列表生成
+L = [x * (x + 1) for x in list(range(1, 100, 2))]
+print(L)
+
+# 复杂表达式
+d = {'Adam': 95, 'Lisa': 85, 'Bart': 59, }
+
+
+# def generate_tr(name, score):
+#     if score < 60:
+#         return '<tr><td>%s</td><td style = "color:red">%s</td></tr>' % (name, score)
+#     return '<tr><td>%s</td><td>%s</td></tr>' % (name, score)
+#
+#
+# tds = [generate_tr(name, score) for name, score in d.iteritems()]
+# print('<table border="1">')
+# print('<tr><th>Name</th><th>Score</th><tr>')
+# print('\n'.join(tds))
+# print('</table>')
+
+
+# 条件过滤for循环的列表生成，编写一个函数，接受一个list,然后把list中的所有字符串变成大写后返回，非字符串元素将被忽略
+def toUppers(L):
+    return [x.upper() for x in L if isinstance(x, str)]
+
+
+print(toUppers(['Hello', 'world', 101]))
+
+# 多层表达式
+L = [x*100 + y*10 + z for x in range(1, 10) for y in range(0, 10) for z in range(0, 10) if x == z]
+print(L)
