@@ -38,3 +38,18 @@ def is_sqr(x):
 
 
 print(list(filter(is_sqr, list(range(1, 101)))))
+
+# sorted()自定义排序函数
+print(sorted(['bob', 'about', 'Zoo', 'Credit'], key=str.lower))
+
+
+# 写一个函数calc_prod(lst)，它接收一个list，返回一个函数，返回函数可以计算参数的乘积。
+def calc_prod(lst):
+    def plus(x, y):
+        return x * y
+
+    return reduce(plus, lst)
+
+
+f = calc_prod([1, 2, 3, 4])
+print(f)
