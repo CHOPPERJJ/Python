@@ -30,6 +30,7 @@ a, b, c = count()
 print(count())
 print(a(), b(), c())
 
+
 # 返回函数mul,调用的函数并没有进行计算
 def count():
     L = []
@@ -50,3 +51,27 @@ a, b, c = count()
 print(a())
 print(b())
 print(c())
+
+# time函数的用法
+import time
+# 输出时间戳
+t = time.time()
+# 输出时间元祖
+mytime = time.localtime(t)
+print('本地时间为：', mytime)
+
+# 输出格式化的时间
+formattime = time.asctime(mytime)
+print(formattime)
+
+# 输出格式化日期
+# 格式化为YY-mm-dd H:M:S形式
+print(time.strftime('%Y-%m-%d %H:%M:%S', time.localtime()))
+
+# 格式化时间为Week mm dd H:M:S Y格式
+print(time.strftime('%a %b %d %H:%M:%S %Y', time.localtime()))
+
+# 将格式化字符串转换为时间戳
+a = 'Thu May 17 15:41:56 2018'
+b = time.strptime(a, '%a %b %d %H:%M:%S %Y')
+print(time.mktime(b))

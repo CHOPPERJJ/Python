@@ -54,9 +54,6 @@ def calc_prod(lst):
 f = calc_prod([1, 2, 3, 4])
 print(f)
 
-<<<<<<< HEAD
-
-=======
 # 匿名函数简化代码
 l = lambda x: x and len(x.strip()) > 0
 s = filter(l, ['test', None, '', 'str', ' ', 'END'])
@@ -81,10 +78,13 @@ f = now()
 print(now.__name__)
 
 
-# 编写一个log
+# 装饰器函数的使用解析，编写一个log,f = factorial
 def log(f):
+    # 创建一个装饰器函数fn,如果调用，fn返回的函数赋给了原函数factorial = fn(factorial),新factorial==f,旧的factorial就被隐藏了。
     def fn(x):
+        # 打印日志
         print('call ' + f.__name__ + '()...')
+        # 调用原函数也就是factorial()
         return f(x)
     return fn
 
@@ -95,4 +95,22 @@ def factorial(n):
 
 
 print(factorial(10))
->>>>>>> b78be4d036316bfd1edb00b6795bbb3269884d3f
+
+# 写一个@perfomance的函数，可以打印出函数调用的时间
+import time
+
+def performance(origin):
+    def showtimes(*args, **kw):
+        print('call ' + origin.__name__ + '() in ' + time.strftime('%Y-%m-%d %H:%M:%S', time.localtime()))
+        return origin(*args, **kw)
+    return showtimes
+
+
+@performance
+def factorial(n):
+    return reduce(lambda x, y: x * y, range(1, n + 1))
+
+
+print(factorial(10))
+
+# 编写带参数的decorator
