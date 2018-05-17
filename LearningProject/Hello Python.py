@@ -113,4 +113,20 @@ def factorial(n):
 
 print(factorial(10))
 
-# 编写带参数的decorator
+# 编写带参数的decorator，将上述函数增加一个参数，允许传入s或者ms
+import time
+
+def performance(unit):
+    def decorator(f):
+        def wrapper(*args, **kw):
+            print('call' + f.__name__ + '() in ' + time.strftime('%a, %b, %d, %H:%M:%S', time.localtime()))
+            return unit(*args, **kw)
+        return wrapper
+    return decorator
+
+
+@performance('ms')
+def factorial(n):
+    return reduce(lambda x, y: x*y, range(1, n+1))
+
+factorial(10)

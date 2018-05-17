@@ -75,3 +75,22 @@ print(time.strftime('%a %b %d %H:%M:%S %Y', time.localtime()))
 a = 'Thu May 17 15:41:56 2018'
 b = time.strptime(a, '%a %b %d %H:%M:%S %Y')
 print(time.mktime(b))
+
+
+import functools
+
+def logger(text):
+    def decorator(func):
+        @functools.wraps(func)
+        def wrapper(*args, **kw):
+            print('%s %s():' % (text, func.__name__))
+            return func(*args, **kw)
+        return wrapper
+    return decorator
+
+@logger('DEBUG')
+def today():
+    print('2015-3-25')
+
+today()
+print(today.__name__)
