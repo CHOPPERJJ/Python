@@ -110,7 +110,6 @@ print(firstCharUpper('september'))
 for i in range(1, 101):
     if i % 7 == 0:
         print(i)
-
 # 迭代函数enumerate()使用方法
 L = ['Adam', 'Lisa', 'Bart', 'Paul']
 t = zip(range(1, len(L) + 1), L)

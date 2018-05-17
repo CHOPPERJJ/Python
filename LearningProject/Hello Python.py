@@ -54,4 +54,45 @@ def calc_prod(lst):
 f = calc_prod([1, 2, 3, 4])
 print(f)
 
+<<<<<<< HEAD
 
+=======
+# 匿名函数简化代码
+l = lambda x: x and len(x.strip()) > 0
+s = filter(l, ['test', None, '', 'str', ' ', 'END'])
+print(list(s))
+
+print(list(filter(lambda x: x and len(x.strip()) > 0, ['test', None, '', 'str', '  ', 'END'])))
+
+
+# 函数装饰器的应用
+# hello.py
+def now():
+    print('2015-3-27')
+
+
+# 函数也是对象，将函数now赋值给变量f
+f = now
+# f指向函数now，f() = now()
+print(f.__name__)
+f()
+# 将函数值now()赋值给变量f
+f = now()
+print(now.__name__)
+
+
+# 编写一个log
+def log(f):
+    def fn(x):
+        print('call ' + f.__name__ + '()...')
+        return f(x)
+    return fn
+
+
+@log
+def factorial(n):
+    return reduce(lambda x, y: x * y, range(1, n + 1))
+
+
+print(factorial(10))
+>>>>>>> b78be4d036316bfd1edb00b6795bbb3269884d3f
