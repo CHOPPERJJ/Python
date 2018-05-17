@@ -53,3 +53,5 @@ def calc_prod(lst):
 
 f = calc_prod([1, 2, 3, 4])
 print(f)
+
+
