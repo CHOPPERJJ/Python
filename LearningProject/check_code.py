@@ -54,6 +54,7 @@ print(c())
 
 # time函数的用法
 import time
+
 # 输出时间戳
 t = time.time()
 # 输出时间元祖
@@ -76,8 +77,8 @@ a = 'Thu May 17 15:41:56 2018'
 b = time.strptime(a, '%a %b %d %H:%M:%S %Y')
 print(time.mktime(b))
 
-
 import functools
+
 
 def logger(text):
     def decorator(func):
@@ -88,9 +89,37 @@ def logger(text):
         return wrapper
     return decorator
 
+
 @logger('DEBUG')
 def today():
     print('2015-3-25')
 
-today()
-print(today.__name__)
+
+# 装饰器理解例子
+import time
+
+
+def deco(func):
+    def wrapper(a, b):
+        startTime = time.time()
+        func(a, b)
+        endTime = time.time()
+        msecs = (endTime - startTime) * 1000
+        print('elapsed time: %f ms' % msecs)
+    return wrapper
+
+# @deco
+# def myfunc():
+#     print('start myfunc')
+#     time.sleep(0.6)
+#     print('end myfunc')
+
+@deco
+def addFunc(a, b):
+    print('start addFun')
+    time.sleep(0.6)
+    print('result is %d' % (a + b))
+    print('end addFun')
+
+
+addFunc(3, 8)
