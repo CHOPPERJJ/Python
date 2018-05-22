@@ -86,6 +86,7 @@ def log(f):
         print('call ' + f.__name__ + '()...')
         # 调用原函数也就是factorial()
         return f(x)
+
     return fn
 
 
@@ -99,10 +100,12 @@ print(factorial(10))
 # 写一个@perfomance的函数，可以打印出函数调用的时间
 import time
 
+
 def performance(origin):
     def showtimes(*args, **kw):
         print('call ' + origin.__name__ + '() in ' + time.strftime('%Y-%m-%d %H:%M:%S', time.localtime()))
         return origin(*args, **kw)
+
     return showtimes
 
 
@@ -116,17 +119,55 @@ print(factorial(10))
 # 编写带参数的decorator，将上述函数增加一个参数，允许传入s或者ms
 import time
 
+
 def performance(unit):
-    def decorator(f):
+    def perf_decorator(f):
         def wrapper(*args, **kw):
-            print('call' + f.__name__ + '() in ' + time.strftime('%a, %b, %d, %H:%M:%S', time.localtime()))
-            return unit(*args, **kw)
+            t1 = time.time()
+            r = f(*args, **kw)
+            t2 = time.time()
+            t = (t2 - t1) * 1000 if unit == 'ms' else (t2 - t1)
+            print('call %s() in %f %s' % (f.__name__, t, unit))
+            return r
+
         return wrapper
-    return decorator
+
+    return perf_decorator
 
 
 @performance('ms')
 def factorial(n):
-    return reduce(lambda x, y: x*y, range(1, n+1))
+    return reduce(lambda x, y: x * y, range(1, n + 1))
 
-factorial(10)
+
+print(factorial(10))
+
+# python中完善decorator,python中完善decorator
+import time, functools
+
+
+def perfomance(unit):
+    def perf_decorator(f):
+        @functools.wraps(f)
+        def wrapper(*args, **kw):
+            t1 = time.time()
+            print ('call %s() in %s%s' % (f.__name__, t1, unit))
+            return f(*args, **kw)
+        return wrapper
+    return perf_decorator
+
+
+@performance('ms')
+def factorial(n):
+    return reduce(lambda x, y: range(n, n + 1))
+
+
+print(factorial.__name__)
+
+# 偏函数的用法，functools.partial
+import functools
+
+sorted_ignore_case = functools.partial(sorted, key = str.lower )
+print(sorted_ignore_case(['bob', 'about', 'Zoo', 'Credit']))
+
+# 模块的导入方式
