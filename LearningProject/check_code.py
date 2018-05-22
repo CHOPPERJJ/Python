@@ -123,3 +123,6 @@ def addFunc(a, b):
 
 
 addFunc(3, 8)
+
+# 带参数的装饰器
+
