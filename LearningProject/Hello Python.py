@@ -151,9 +151,11 @@ def perfomance(unit):
         @functools.wraps(f)
         def wrapper(*args, **kw):
             t1 = time.time()
-            print ('call %s() in %s%s' % (f.__name__, t1, unit))
+            print('call %s() in %s%s' % (f.__name__, t1, unit))
             return f(*args, **kw)
+
         return wrapper
+
     return perf_decorator
 
 
@@ -167,7 +169,6 @@ print(factorial.__name__)
 # 偏函数的用法，functools.partial
 import functools
 
-sorted_ignore_case = functools.partial(sorted, key = str.lower )
+sorted_ignore_case = functools.partial(sorted, key=str.lower)
 print(sorted_ignore_case(['bob', 'about', 'Zoo', 'Credit']))
 
-# 模块的导入方式
