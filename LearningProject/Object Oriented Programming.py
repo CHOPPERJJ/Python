@@ -25,11 +25,17 @@ print(L2[2].name)
 
 # Person类的__init__方法，除了接受 name、gender 和 birth 外，还可接受任意关键字参数，并把他们都作为属性赋值给实例。
 class Person(object):
-    def __int__(self, name, sex, birth):
-        pass
+    def __int__(self, name, sex, birth, **kw):
+        self.name = name
+        self.sex = sex
+        self.birth = birth
+        self.__dict__.update(kw)
+
+    def print_things(self):
+        print('%s, %s, %s, %s' % (self.name, self.sex, self.birth, self.job))
 
 
 xiaoming = Person('Xiao Ming', 'Male', '1990-1-1', job='Student')
 print(xiaoming.name)
 print(xiaoming.sex)
-print(xiaoming.job)
+xiaoming.print_things()
