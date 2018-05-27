@@ -149,10 +149,6 @@ def factorial(n):
     return reduce(lambda x,y: x*y, range(1, n+1))
 
 print (factorial(10))
-=======
-
->>>>>>> 86db22c77e56007cebb2ebc07edd63f065f1d17d
-
 # 带参数的装饰器
 # import time
 #
