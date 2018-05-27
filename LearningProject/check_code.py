@@ -123,10 +123,7 @@ def addFunc(a, b):
 
 
 addFunc(3, 8)
-
-<<<<<<< HEAD
 # 带参数的装饰器
-=======
 
 import time
 
@@ -147,5 +144,4 @@ def factorial(n):
     return reduce(lambda x,y: x*y, range(1, n+1))
 
 print (factorial(10))
->>>>>>> 66b640b289e83d60024a17abd684143eadfd103d
 
