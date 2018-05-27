@@ -86,7 +86,9 @@ def logger(text):
         def wrapper(*args, **kw):
             print('%s %s():' % (text, func.__name__))
             return func(*args, **kw)
+
         return wrapper
+
     return decorator
 
 
@@ -106,7 +108,9 @@ def deco(func):
         endTime = time.time()
         msecs = (endTime - startTime) * 1000
         print('elapsed time: %f ms' % msecs)
+
     return wrapper
+
 
 # @deco
 # def myfunc():
@@ -123,6 +127,7 @@ def addFunc(a, b):
 
 
 addFunc(3, 8)
+<<<<<<< HEAD
 # 带参数的装饰器
 
 import time
@@ -144,4 +149,56 @@ def factorial(n):
     return reduce(lambda x,y: x*y, range(1, n+1))
 
 print (factorial(10))
+=======
 
+>>>>>>> 86db22c77e56007cebb2ebc07edd63f065f1d17d
+
+# 带参数的装饰器
+# import time
+#
+# def performance(unit):
+#     def perf_decorator(f):
+#         def wrapper(*args, **kw):
+#             t1 = time.time()
+#             r = f(*args, **kw)
+#             t2 = time.time()
+#             t = (t2 - t1)*1000 if unit =='ms' else (t2 - t1)
+#             print ('call %s() in %f %s'%(f.__name__, t, unit))
+#             return r
+#         return wrapper
+#     return perf_decorator
+#
+# @performance('ms')
+# def factorial(n):
+#     return reduce(lambda x,y: x*y, range(1, n+1))
+#
+# print (factorial(10))
+
+# 类和实例，实例属性等
+class Student(object):
+
+    def __init__(self, name, score):
+        self.name = name
+        self.score = score
+
+    def print_score(self):
+        print('%s: %s' % (self.name, self.score))
+
+    def get_grade(self):
+        if self.score >= 90:
+            return 'A'
+        elif self.score >= 60:
+            return 'B'
+        else:
+            return 'C'
+
+
+bart = Student('Bart Simpson', 59)
+lisa = Student('Lisa Simpson', 87)
+
+print('bart.name =', bart.name)
+print('bart.score =', bart.score)
+bart.print_score()
+
+print('grade of Bart:', bart.get_grade())
+print('grade of Lisa:', lisa.get_grade())
