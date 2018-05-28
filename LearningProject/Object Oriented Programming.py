@@ -44,10 +44,43 @@ print(xiaoming._title)
 # python中访问限制
 class Person(object):
     def __init__(self, name, score):
-        self.myname = name
-        self._score = score
+        self.__myname = name
+        self.__score = score
+
+    def get_myname(self):
+        return self.__myname
+
+    # 创建可以访问内部score的方法
+    def get_score(self):
+        return self.__score
+
+    def set_score(self, score):
+        if 0 <= score <= 100:
+            self.__score = score
+        else:
+            raise ValueError('bad score')
 
 
 p = Person('Bob', 59)
-print(p.myname)
-print(p.__score)
+p.set_score(60)
+print('p.get_myname()=', p.get_myname())
+print('p.get_score()=', p.get_score())
+
+
+# 创建类属性
+class Person(object):
+    count = 0
+
+    def __init__(self, name):
+        self.getname = name
+        Person.count = Person.count + 1
+
+
+p1 = Person('Bob')
+print(Person.count)
+
+p2 = Person('Alice')
+print(Person.count)
+
+p3 = Person('Tim')
+print(Person.count)
