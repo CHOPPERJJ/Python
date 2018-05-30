@@ -109,3 +109,17 @@ p3 = Person('Tim', 48)
 print(p1.name, p1.get_grade())
 print(p2.name, p2.get_grade())
 print(p3.name, p3.get_grade())
+
+# 定义类方法
+class Person(object):
+    count = 0
+    @classmethod
+    def how_many(cls):
+        return cls.count
+    def __init__(self, name):
+        self.name = name
+        Person.count = Person.count + 1
+
+print Person.how_many()
+p1 = Person('Bob')
+print Person.how_many()
