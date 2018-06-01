@@ -127,3 +127,171 @@ class Person(object):
 print(Person.how_many())
 p1 = Person('Bob')
 print(Person.how_many())
+
+
+# 继承和多态
+class Person(object):
+    def __init__(self, name, gender):
+        self.name = name
+        self.gender = gender
+
+
+class Teacher(Person):
+    def __init__(self, name, gender, course):
+        super(Teacher, self).__init__(name, gender)
+        self.course = course
+
+
+t = Teacher('Alice', 'Female', 'English')
+print(t.name)
+print(t.gender)
+print(t.course)
+
+
+# python中判断类型
+class Person(object):
+    def __init__(self, name, gender):
+        self.name = name
+        self.gender = gender
+
+
+class Student(Person):
+    def __init__(self, name, gender, score):
+        super(Student, self).__init__(name, gender)
+        self.score = score
+
+
+class Teacher(Person):
+    def __init__(self, name, gender, course):
+        super(Teacher, self).__init__(name, gender)
+        self.course = course
+
+
+p = Person('Tim', 'Male')
+s = Student('Bob', 'Male', 88)
+t = Teacher('Alice', 'Female', 'English')
+
+print(t.gender)
+print(isinstance(p, Person))
+print(isinstance(s, Student))
+print(isinstance(t, Teacher))
+print(isinstance(s, Student))
+print(isinstance(t, Person))
+print(isinstance(t, object))
+
+
+# python多态
+class Person(object):
+    def __init__(self, name, gender):
+        self.name = name
+        self.gender = gender
+
+    def whoAmI(self):
+        return 'I am Person, my name is %s' % self.name
+
+
+class Student(Person):
+    def __init__(self, name, gender, score):
+        super(Student, self).__init__(name, gender)
+        self.score = score
+
+    def whoAmI(self):
+        return 'I am Student, my name is %s' % self.name
+
+
+class Teacher(Person):
+    def __init__(self, name, gender, course):
+        super(Teacher, self).__init__(name, gender)
+        self.course = course
+
+    def whoAmI(self):
+        return 'I am Teacher, my name is %s' % self.name
+
+    def who_am_i(x):
+        print(x.whoAmI())
+
+
+p = Person('Tim', 'Male')
+s = Student('Bob', 'Male', 88)
+t = Teacher('Alice', 'Female', 'English')
+
+print(p.whoAmI())
+print(s.whoAmI())
+print(t.whoAmI())
+
+# File-like Object,把一个字符串r'["Tim", "Bob", "Alice"]'包装成File-like Obeject并由json.load()解析
+import json
+
+
+class Student(object):
+    def __init__(self, name):
+        self.name = name
+
+    def read(self):
+        return self.name
+
+
+s = Student('["Tim", "Bob", "Alice"]')
+print(json.load(s))
+
+
+# python中—__str__和__repr__
+class Person(object):
+    def __init__(self, name, gender):
+        self.name = name
+        self.gender = gender
+
+    # 给person加上__str__方法
+    def __str__(self):
+        return '(Person: %s, %s)' % (self.name, self.gender)
+
+
+p = Person('Bob', 'male')
+print(p)
+
+
+# 给student类定义__str__和__repr__方法
+class Person(object):
+    def __init__(self, name, gender):
+        self.name = name
+        self.gender = gender
+
+
+class Student(Person):
+    def __init__(self, name, gender, score):
+        super(Student, self).__init__(name, gender)
+        self.score = score
+
+    def __str__(self):
+        return '(Student: %s, %s, %s)' % (self.name, self.gender, self.score)
+
+    __repr__ = __str__
+
+
+s = Student('BBob', 'male', 88)
+print(s.name)
+print(s)
+
+
+# python中的__cmp__方法
+class Student(object):
+    def __init__(self, name, score):
+        self.name = name
+        self.score = score
+
+    def __str__(self):
+        return '(%s: %s)' % (self.name, self.score)
+
+    __repr__ = __str__
+
+    def __cmp__(self, s):
+        if self.name < s.name:
+            return -1
+        elif self.name > s.name:
+            return 1
+        else:
+            return 0
+
+
+L = [Student('Tim', 99), Student('Bob', 88), Student('Alice', 77)]
+print(s.name)

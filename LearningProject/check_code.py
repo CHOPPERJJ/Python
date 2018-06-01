@@ -127,28 +127,36 @@ def addFunc(a, b):
 
 
 addFunc(3, 8)
-<<<<<<< HEAD
-# 带参数的装饰器
 
-import time
 
-def performance(unit):
-    def perf_decorator(f):
-        def wrapper(*args, **kw):
-            t1 = time.time()
-            r = f(*args, **kw)
-            t2 = time.time()
-            t = (t2 - t1)*1000 if unit =='ms' else (t2 - t1)
-            print ('call %s() in %f %s'%(f.__name__, t, unit))
-            return r
-        return wrapper
-    return perf_decorator
+# # 带参数的装饰器
+#
+# import time
+#
+#
+# def performance(unit):
+#     def perf_decorator(f):
+#         def wrapper(*args, **kw):
+#             t1 = time.time()
+#             r = f(*args, **kw)
+#             t2 = time.time()
+#             t = (t2 - t1) * 1000 if unit == 'ms' else (t2 - t1)
+#             print('call %s() in %f %s' % (f.__name__, t, unit))
+#             return r
+#
+#         return wrapper
+#
+#     return perf_decorator
+#
+#
+# @performance('ms')
+# def factorial(n):
+#     return reduce(lambda x, y: x * y, range(1, n + 1))
+#
+#
+# print(factorial(10))
 
-@performance('ms')
-def factorial(n):
-    return reduce(lambda x,y: x*y, range(1, n+1))
 
-print (factorial(10))
 # 带参数的装饰器
 # import time
 #
@@ -198,3 +206,28 @@ bart.print_score()
 
 print('grade of Bart:', bart.get_grade())
 print('grade of Lisa:', lisa.get_grade())
+
+# 获取对象属性getattr(),setattr()
+class MyObject(object):
+
+    def __init__(self):
+        self.x = 9
+
+    def power(self):
+        return self.x * self.x
+
+
+obj = MyObject()
+
+print('hasattr(obj, \'x\') =', hasattr(obj, 'x'))  # 有属性'x'吗？
+print('hasattr(obj, \'y\') =', hasattr(obj, 'y'))  # 有属性'y'吗？
+setattr(obj, 'y', 19)  # 设置一个属性'y'
+print('hasattr(obj, \'y\') =', hasattr(obj, 'y'))  # 有属性'y'吗？
+print('getattr(obj, \'y\') =', getattr(obj, 'y'))  # 获取属性'y'
+print('obj.y =', obj.y)  # 获取属性'y'
+
+print('getattr(obj, \'z\') =', getattr(obj, 'z', 404))  # 获取属性'z'，如果不存在，返回默认值404
+
+f = getattr(obj, 'power')  # 获取属性'power'
+print(f)
+print(f())
