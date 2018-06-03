@@ -1,8 +1,19 @@
-class Student(object):
-    self.name = name
-    self.score = score
+class Fib(object):
+    def __init__(self, num):
+        a, b, L = 0, 1, []
+        for n in range(num):
+            L.append(a)
+            a, b = b, a + b
+        self.numbers = L
 
-class Student(Person):
+    def __str__(self):
+        return str(self.numbers)
 
-L = [Student('Tim', 99), Student('Bob', 88), Student('Alice', 99)]
-print (sorted(L, key=lambda student:(student.score,student.name))
+    __repr__ = __str__
+
+    def __len__(self):
+        return len(self.numbers)
+
+f = Fib(10)
+print(f)
+print(len(f))

@@ -252,9 +252,9 @@ print(p)
 
 # 给student类定义__str__和__repr__方法
 class Person(object):
-    def __init__(self, name, gender):
-        self.name = name
-        self.gender = gender
+    def __init__(self, p_name, p_gender):
+        self.name = p_name
+        self.gender = p_gender
 
 
 class Student(Person):
@@ -275,19 +275,19 @@ print(s)
 
 # python中的__cmp__方法
 class Student(object):
-    def __init__(self, name, score):
-        self.name = name
-        self.score = score
+    def __init__(self, p_name, p_score):
+        self.att_name = p_name
+        self.att_score = p_score
 
     def __str__(self):
-        return '(%s: %s)' % (self.name, self.score)
+        return '(%s: %s)' % (self.att_name, self.att_score)
 
     __repr__ = __str__
 
     def __cmp__(self, s):
-        if self.name < s.name:
+        if self.att_name < s.name:
             return -1
-        elif self.name > s.name:
+        elif self.att_name > s.name:
             return 1
         else:
             return 0
@@ -295,3 +295,25 @@ class Student(object):
 
 L = [Student('Tim', 99), Student('Bob', 88), Student('Alice', 77)]
 print(s.name)
+
+
+# python中的__len__函数的用法,编写一个斐波那契数Fib类(6-4)进阶篇
+class Fib(object):
+    def __init__(self, p_num):
+        self.num = p_num
+        a, b, L = 0, 1, []
+        for x in range(p_num):
+            L.append(a)
+            a = b
+            b = a + b
+        self.list = L
+
+    def __str__(self):
+        return str(self.list)
+
+    def __len__(self):
+        return len(self.list)
+
+f = Fib(10)
+print(f)
+print(len(f))
