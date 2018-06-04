@@ -304,8 +304,7 @@ class Fib(object):
         a, b, L = 0, 1, []
         for x in range(p_num):
             L.append(a)
-            a = b
-            b = a + b
+            a, b = b, a + b
         self.list = L
 
     def __str__(self):
@@ -314,6 +313,46 @@ class Fib(object):
     def __len__(self):
         return len(self.list)
 
+
 f = Fib(10)
 print(f)
 print(len(f))
+
+
+# python中数学运算
+def gcd(a, b):
+    while a != 0:
+        a, b = b % a, a
+    return b
+
+
+class Rational(object):
+    def __init__(self, p_a, p_b):
+        self.a = p_a
+        self.b = p_b
+
+    def __add__(self, r):
+        return Rational(self.a * r.b + self.b * r.a, self.b * r.b)
+
+    def __sub__(self, r):
+        return Rational(self.a * r.b - self.b * r.a, self.b * r.b)
+
+    def __mul__(self, r):
+        return Rational(self.a * r.a, self.b * r.b)
+
+    def __truediv__(self, r):
+        return Rational(self.a * r.b, self.b * r.a)
+
+    def __str__(self):
+        c = gcd(self.a, self.b)
+        return '%s/%s' % (self.a/c, self.b/c)
+
+    __repr__ = __str__
+
+
+r1 = Rational(1, 2)
+r2 = Rational(1, 4)
+print(r1 + r2)
+print(r1 - r2)
+print(r1 * r2)
+print(r1 / r2)
