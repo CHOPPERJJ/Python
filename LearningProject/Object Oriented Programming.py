@@ -93,7 +93,15 @@ class Person(object):
         self.name = name
         self.__score = score
 
-    def get_grade(self):
+    def get_grade(self, score):
+        if score >= 90:
+            return 'A'
+        elif score >= 60:
+            return 'B'
+        else:
+            return 'C'
+
+    def get_grade_two(self):
         if self.__score >= 90:
             return 'A'
         elif self.__score >= 60:
@@ -101,14 +109,13 @@ class Person(object):
         else:
             return 'C'
 
-
 p1 = Person('Bob', 90)
 p2 = Person('Alice', 65)
 p3 = Person('Tim', 48)
 
-print(p1.name, p1.get_grade())
-print(p2.name, p2.get_grade())
-print(p3.name, p3.get_grade())
+print(p1.name, p1.get_grade(90))
+print(p2.name, p2.get_grade(65))
+print(p3.name, p3.get_grade_two())
 
 
 # 定义类方法__count为类的私有属性
@@ -319,7 +326,7 @@ print(f)
 print(len(f))
 
 
-# python中数学运算
+# python中数学运算,涉及传参的问题，注意理解里面参数的传递方式
 def gcd(a, b):
     while a != 0:
         a, b = b % a, a
@@ -345,7 +352,7 @@ class Rational(object):
 
     def __str__(self):
         c = gcd(self.a, self.b)
-        return '%s/%s' % (self.a/c, self.b/c)
+        return '%s/%s' % (self.a / c, self.b / c)
 
     __repr__ = __str__
 
@@ -356,3 +363,29 @@ print(r1 + r2)
 print(r1 - r2)
 print(r1 * r2)
 print(r1 / r2)
+
+
+# python 类型转换
+class Rational(object):
+    def __init__(self, p_a, p_b):
+        self.a = p_a
+        self.b = p_b
+
+    def __int__(self):
+        return self.a // self.b
+
+    def __float__(self):
+        return self.a / self.b
+
+
+print(int(Rational(7, 2)))
+print(int(Rational(1, 3)))
+print(float(Rational(7, 2)))
+print(float(Rational(1, 3)))
+
+# python中的@property
+class Student(object):
+    def __init__(self, p_name, p_score):
+        self.name = p_name
+        self.score = p_score
+
