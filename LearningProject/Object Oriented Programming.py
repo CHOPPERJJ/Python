@@ -109,13 +109,23 @@ class Person(object):
         else:
             return 'C'
 
+    def get_grade_three(self):
+        if self.__score >= 90:
+            a = 'A'
+        elif self.__score >= 60:
+            a = 'B'
+        else:
+            a = 'C'
+            return a
+
+
 p1 = Person('Bob', 90)
 p2 = Person('Alice', 65)
 p3 = Person('Tim', 48)
 
 print(p1.name, p1.get_grade(90))
-print(p2.name, p2.get_grade(65))
-print(p3.name, p3.get_grade_two())
+print(p2.name, p2.get_grade_two())
+print(p3.name, p3.get_grade_three())
 
 
 # 定义类方法__count为类的私有属性
@@ -383,9 +393,61 @@ print(int(Rational(1, 3)))
 print(float(Rational(7, 2)))
 print(float(Rational(1, 3)))
 
-# python中的@property
-class Student(object):
-    def __init__(self, p_name, p_score):
-        self.name = p_name
-        self.score = p_score
 
+# python中的@property应用举例
+class Student(object):
+    def __init__(self, p_score):
+        self.__score = p_score
+
+    @property
+    def score(self):
+        return self.__score
+
+    @score.setter
+    def score(self, p_score):
+        if p_score < 0 or p_score > 100:
+            raise ValueError('invalid score')
+        self.__score = p_score
+
+    @property
+    def grade(self):
+        if self.__score >= 80:
+            return 'A'
+        elif self.__score >= 60:
+            return 'B'
+        else:
+            return 'C'
+
+
+s = Student(59)
+print(s.grade)
+
+s.score = 60
+print(s.grade)
+
+s.score = 99
+print(s.grade)
+
+
+# python中使用__slots__限制实例添加属性
+class Person(object):
+    __slots__ = ('name', 'gender')
+
+    def __init__(self, p_name, p_gender):
+        self.name = p_name
+        self.gender = p_gender
+
+
+class Student(Person):
+    __slots__ = ('name', 'gender', 'score')
+
+    def __init__(self, p_name, p_gender, p_score):
+        self.name = p_name
+        self.gender = p_gender
+        self.gender = p_score
+
+
+s = Student('Bob', 'male', '59')
+s.name = 'Tim'
+s.score = 99
+print(s.name, s.score)

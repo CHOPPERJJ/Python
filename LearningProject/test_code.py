@@ -1,33 +1,30 @@
-class Student(object):
-    def __init__(self, p_name, p_score):
-        self.name = p_name
-        self.__score = p_score
+class Fib(object):
+    def __init__(self, p_num):
+        self.num = p_num
+        a, b, L = 0, 1, []
+        for x in range(p_num):
+            L.append(a)
+            a, b = b, a + b
+        self.list = L
 
-    @property
-    def score(self):
-        return self.__score
-
-    def grade(self):
-        return self.__grade
-
-    @score.setter
-    def score(self, p_score):
-        if p_score < 0 or p_score > 100:
-            raise ValueError('invalid score')
-        self.__score = p_score
-
-    @property
-    def grade(self, p_score):
-        if p_score >= 80:
-            self.__grade = 'A'
-        elif p_score > 60:
-            self.__grade = 'B'
-        else:
-            self.__grade = 'C'
+    def __call__(self, p):
+        print('Fib is %s' % self.list)
 
 
-s = Student('Bob', 59)
-s.score = 60
-print(s.grade)
-s.score = 99
-print(s.grade)
+# 调用实例对象f，f即是函数也是对象，函数可以被调用，也就是直接调用实例对象函数
+f = Fib(10)
+print(f(10))
+
+
+class Fib(object):
+    def __call__(self, p_num):
+        self.num = p_num
+        a, b, L = 0, 1, []
+        for x in range(p_num):
+            L.append(a)
+            a, b = b, a + b
+        return L
+
+
+f = Fib()
+print(f(10))
