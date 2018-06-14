@@ -67,10 +67,124 @@ print('day1 == Weekday.Mon ?', day1 == Weekday.Mon)
 print('day1 == Weekday.Tue ?', day1 == Weekday.Tue)
 print('day1 == Weekday(1) ?', day1 == Weekday(1))
 
-for name, member in Weekday.__members__.items():
-    print(name, '=>', member)
 
-Month = Enum('Month', ('Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'))
-
+# for name, member in Weekday.__members__.items():
+#     print(name, '=>', member)
+#
+# Month = Enum('Month', ('Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'))
+#
 # for name, member in Month.__members__.items():
 # print(name, '=>', member, ',', member.value)
+
+
+# 元类type()
+def fn(self, name='world'):  # 先定义函数
+    print('Hello, %s.' % name)
+
+
+Hello = type('Hello', (object,), dict(hello=fn))  # 创建Hello class
+
+h = Hello()
+print('call h.hello():')
+h.hello()
+print('type(Hello) =', type(Hello))
+print('type(h) =', type(h))
+
+
+# metaclass是创建类，所以必须从`type`类型派生：
+class ListMetaclass(type):
+    def __new__(cls, name, bases, attrs):
+        attrs['add'] = lambda self, value: self.append(value)
+        return type.__new__(cls, name, bases, attrs)
+
+
+# 指示使用ListMetaclass来定制类
+class MyList(list, metaclass=ListMetaclass):
+    pass
+
+
+L = MyList()
+L.add(1)
+L.add(2)
+L.add(3)
+L.add('END')
+print(L)
+
+# 错误调试try使用的方式
+try:
+    print('try...')
+    r = 10 / 0
+    print('result', r)
+except ZeroDivisionError as e:
+    print('except:', e)
+finally:
+    print('finally...')
+    print('END')
+
+# try...except跨越多层调用，导入模块logging可以更好的记录当前错误，并且程序会继续执行
+
+import logging
+
+
+def foo(s):
+    return 10 / int(s)
+
+
+def bar(s):
+    return foo(s) * 2
+
+
+def main():
+    try:
+        bar('0')
+    except Exception as e:
+        logging.exception(e)
+
+
+main()
+print('END')
+
+
+# python抛出错误的使用，raise自定义错误类型,捕获错误日志并且记录，便于后续追踪，但是函数不知道怎么处理该错误，继续往上抛
+class FooError(ValueError):
+    pass
+
+
+def foo(s):
+    n = int(s)
+    if n == 0:
+        raise FooError('invalid value : %s' % s)
+    return 10 / n
+
+
+def bar():
+    try:
+        foo('0')
+    except ValueError as e:
+        print('ValueError!')
+        raise
+
+
+bar()
+
+
+# python调试方法
+def foo(s):
+    n = int(s)
+    assert n != 0, 'n is zero!'
+    return 10 / n
+
+
+def main():
+    foo('0')
+
+
+main()
+
+import logging
+logging.basicConfig(level=logging.INFO)
+
+s = '0'
+n = int(s)
+logging.info('n = %d' % n)
+print(10 / n)
