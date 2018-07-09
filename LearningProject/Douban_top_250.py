@@ -3,6 +3,7 @@
 
 import requests
 import pprint
+import json
 from bs4 import BeautifulSoup
 
 r = requests.get('https://movie.douban.com/top250')
@@ -21,5 +22,8 @@ for movie in movie_list:
 
     result_list.append(mydict)
 
-pp = pprint.PrettyPrinter(indent=4)
-pp.pprint(result_list)
+# 将result_list这个json格式的python对象转化为字符串
+s = json.dump(result_list, indent=4, ensure_ascii=False)
+# 将字符串写入文件
+with open('movies.json', 'w', encoding='utf-8') as f :
+    f.write(s)
