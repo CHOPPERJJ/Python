@@ -28,8 +28,20 @@ def parse(text):
     return result_list
 
 
-# 将result_list这个json格式的python对象转化为字符串
-s = json.dumps(result_list, indent=4, ensure_ascii=False)
-# 将字符串写入文件
-with open('movies.json', 'w', encoding='utf-8') as f:
-    f.write(s)
+# 将数据写入json
+def write_json(result):
+    s = json.dumps(result, indent=4, ensure_ascii=False)
+    with open('movies.json', 'w', encoding='utf-8') as f:
+        f.write(s)
+
+
+# 主函数，调用其他函数
+def main():
+    url = 'https://movie.douban.com/top250'
+    text = start_reqyests(url)
+    result = parse(text)
+    write_json(result)
+
+
+if __name__ == '__main__':
+    main()
