@@ -1,11 +1,13 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
-import json
-import pandas as pd
+def fab(max):
+    n, a, b = 0, 0, 1
+    while n < max:
+        yield b
+        # print b
+        a, b = b, a + b
+        n = n + 1
 
-with open('movies.json', encoding='utf-8') as f:
-    s = f.read()
-data = json.loads(s)
-df = pd.DataFrame(data)
-print(df)
+for n in fab(5):
+    print(n)
