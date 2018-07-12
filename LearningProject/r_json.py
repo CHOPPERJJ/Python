@@ -1,13 +1,9 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
-def fab(max):
-    n, a, b = 0, 0, 1
-    while n < max:
-        yield b
-        # print b
-        a, b = b, a + b
-        n = n + 1
+r = '{}:计算机{}的CPU占用率为{}%。'.format('2018-07-12', 'PYTHON', 10)
+s = '{}:接下来会发生的事件:{}'.format('其他方面', 'python会崩溃')
+a = '{}{}{}'.format('圆周率是：', 3.1415926, '...')
+b = '圆周率{{{1}{2}}}是{0}'.format('无理数', 3.1415926, '...')
 
-for n in fab(5):
-    print(n)
+print(b)
