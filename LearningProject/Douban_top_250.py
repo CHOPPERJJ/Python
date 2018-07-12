@@ -7,7 +7,7 @@ from bs4 import BeautifulSoup
 
 
 # 发送请求，获取网页源代码以供解析
-def start_reqyests(url):
+def start_requests(url):
     r = requests.get(url)
     return r.content
 
@@ -38,7 +38,7 @@ def write_json(result):
 # 主函数，调用其他函数
 def main():
     url = 'https://movie.douban.com/top250'
-    text = start_reqyests(url)
+    text = start_requests(url)
     result = parse(text)
     write_json(result)
 
