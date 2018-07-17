@@ -35,3 +35,14 @@ print(mo2.group())
 vowelRegex = re.compile(r'[aeiouAEIOU]')
 my = vowelRegex.findall('RoboCop eats baby food. BABY FOOD.')
 print(my)
+
+# 通配字符
+atRegex = re.compile(r'.at')
+mo = atRegex.findall('The cat in the hat sat on the flat mat.')
+print(mo)
+
+# 用点-星匹配所有字符
+nameRegex = re.compile(r'First name: (.*) Last Name: (.*)')
+mo3 = nameRegex.search('First Name: Al Last Name: Sweigart')
+print(mo3.group(1))
+print(mo3.group(2))
