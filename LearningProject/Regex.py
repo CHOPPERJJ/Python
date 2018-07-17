@@ -25,3 +25,13 @@ print(mo1.group())
 print(mo1.group(1))
 
 # 用问号实现可选匹配
+batRegex = re.compile(r'Bat(wo)?man')
+mo1 = batRegex.search('The adventures of Batman')
+mo2 = batRegex.search('The adventures of Batwoman')
+print(mo1.group())
+print(mo2.group())
+
+# 建立自己的字符分类
+vowelRegex = re.compile(r'[aeiouAEIOU]')
+my = vowelRegex.findall('RoboCop eats baby food. BABY FOOD.')
+print(my)
