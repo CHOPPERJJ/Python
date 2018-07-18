@@ -44,5 +44,8 @@ print(mo)
 # 用点-星匹配所有字符
 nameRegex = re.compile(r'First name: (.*) Last Name: (.*)')
 mo3 = nameRegex.search('First Name: Al Last Name: Sweigart')
-print(mo3.group(1))
-print(mo3.group(2))
+
+# 用sub()方法替换字符串
+nameRegex = re.compile(r'Agent \w+')
+sub = nameRegex.sub('CENSORED', 'Agent Alice gave the secret documents to Agent Bob.')
+print(sub)
