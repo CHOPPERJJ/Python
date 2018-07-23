@@ -8,7 +8,7 @@ import os, re, shutil
 datePattern = re.compile(r'''^(.*?)
     ((0|1)?\d)-
     ((0|1|2|3)?\d)-
-    ((19|20)\d\d)-
+    ((19|20)\d\d)
     (.*?)$
     ''', re.VERBOSE)
 
@@ -16,7 +16,7 @@ datePattern = re.compile(r'''^(.*?)
 path = 'c:\\am_date'
 for amerFilename in os.listdir(path):
     mo = datePattern.search(amerFilename)
-
+    # print(mo.group(1) + mo.group(2) + mo.group(4) + mo.group(6) + mo.group(8))
     # 略过没有时间的文本
     if mo == None:
         continue
@@ -28,12 +28,14 @@ dayPart = mo.group(4)
 yearPart = mo.group(6)
 afterPart = mo.group(8)
 
-# 转变为欧洲时间格式
+# # 转变为欧洲时间格式
 euroFilename = beforePart + dayPart + '-' + monthPart + '-' + yearPart + afterPart
-absWorkingDir = os.path.abspath('am_date.txt')
+absWorkingDir = os.path.abspath('am_date')
 amerFilename = os.path.join(absWorkingDir, amerFilename)
 euroFilename = os.path.join(absWorkingDir, euroFilename)
-
+print(absWorkingDir)
+print(amerFilename)
+print(euroFilename)
 # 重命名文件
 print('Renaming "%s" to "%s"...' % (amerFilename, euroFilename))
 # shutil.move(amerFilename, euroFilename)
