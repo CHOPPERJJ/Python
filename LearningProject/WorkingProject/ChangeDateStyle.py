@@ -22,20 +22,18 @@ for amerFilename in os.listdir(path):
         continue
 
 # 获取日期不同的组成部分
-beforePart = mo.group(1)
-monthPart = mo.group(2)
-dayPart = mo.group(4)
-yearPart = mo.group(6)
-afterPart = mo.group(8)
-
+    beforePart = mo.group(1)
+    monthPart = mo.group(2)
+    dayPart = mo.group(4)
+    yearPart = mo.group(6)
+    afterPart = mo.group(8)
 # # 转变为欧洲时间格式
-euroFilename = beforePart + dayPart + '-' + monthPart + '-' + yearPart + afterPart
-absWorkingDir = os.path.abspath('am_date')
-amerFilename = os.path.join(absWorkingDir, amerFilename)
-euroFilename = os.path.join(absWorkingDir, euroFilename)
-print(absWorkingDir)
-print(amerFilename)
-print(euroFilename)
-# 重命名文件
-print('Renaming "%s" to "%s"...' % (amerFilename, euroFilename))
-# shutil.move(amerFilename, euroFilename)
+    euroFilename = beforePart + dayPart + '-' + monthPart + '-' + yearPart + afterPart
+    absWorkingDir = os.path.abspath('am_date')
+    amerFilename = os.path.join(absWorkingDir, amerFilename)
+    euroFilename = os.path.join(absWorkingDir, euroFilename)
+    print(amerFilename)
+    print(euroFilename)
+    # 重命名文件
+    print('Renaming "%s" to "%s"...' % (amerFilename, euroFilename))
+    shutil.move(amerFilename, euroFilename)
