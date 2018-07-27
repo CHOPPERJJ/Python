@@ -29,3 +29,4 @@ rel_soup = BeautifulSoup('<p>Back to the <a rel="index">homepage</a></p>', 'lxml
 print(rel_soup.a['rel'])
 rel_soup.a['rel'] = ['index', 'contents']
 print(rel_soup.p)
+
