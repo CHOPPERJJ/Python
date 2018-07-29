@@ -29,3 +29,5 @@ def parseUrl(text):
 
 def writeJson(result):
     s = json.dumps(result, indent=4, ensure_ascii=False)
+    with open('movies.json', 'w', encoding='utf-8') as f:
+        f.write(s)
