@@ -84,11 +84,44 @@ soup = BeautifulSoup(html_doc, 'html.parser')
 # print(css_soup.find_all('p', class_='body'))
 # print(css_soup.find_all('p', class_='body strikeout'))
 
-# 通过 string 参数可以搜搜文档中的字符串内容
-print(soup.find_all(string='Elsie'))
-print(soup.find_all('a', string='Elsie'))
-print(soup.find('a', class_='sister'))
-print(soup.a.string)
-print(soup.find_all(string=['Tillie', 'Elsie', 'Lacie']))
-print(soup.find_all(string=re.compile('Dor')))
+# # 通过 string 参数可以搜索文档中的字符串内容
+# print(soup.find_all(string='Elsie'))
+# print(soup.find_all('a', string='Elsie'))
+# print(soup.find('a', class_='sister'))
+# print(soup.a.string)
+# print(soup.find_all(string=['Tillie', 'Elsie', 'Lacie']))
+# print(soup.find_all(string=re.compile('Dor')))
+
+# # limit参数限制返回数量
+# print(soup.find_all('a', limit = 2))
+# print(soup.html.find_all('title'))
+# print(soup.html.find_all('title', recursive = False))
+# print(soup.find_parents('a'))
+#
+# # find_parents()方法的使用
+# s = soup.find(string='Tillie')
+# print(s)
+# print(s.find_parents('a'))
+
+# # find_next_siblings()和find_next_silbing()方法的使用
+# s1 = soup.a
+# print(s1.find_next_siblings('a'))
+# s2 = soup.find('p', 'story')
+# print(s2)
+# print(s2.find_next_sibling('p'))
+
+# # find_previous_siblings()和find_previous_sibling()使用方法
+# s3 = soup.find('a', id = 'link3')
+# print(s3)
+# print(s3.find_previous_siblings('a'))
+# s4 = soup.find('p', 'story')
+# print(s4.find_previous_sibling('p'))
+
+# find_all_next()和find_next()使用方法
+s5 = soup.a
+print(s5)
+print(s5.find_all_next('a'))
+print(s5.find_next('p'))
+
+
 
