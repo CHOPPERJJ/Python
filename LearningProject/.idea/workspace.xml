@@ -8,10 +8,6 @@
       <change beforePath="$PROJECT_DIR$/.idea/LearningProject.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/LearningProject.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WorkingProject/BackupToZip.py" beforeDir="false" afterPath="$PROJECT_DIR$/WorkingProject/BackupToZip.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WorkingProject/Temp.py" beforeDir="false" afterPath="$PROJECT_DIR$/WorkingProject/Temp.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WorkingProject/folder/zip01.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WorkingProject/folder/zip03.txt" beforeDir="false" afterPath="$PROJECT_DIR$/WorkingProject/folder/zip03.txt" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -22,66 +18,58 @@
   </component>
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/LearningProject$do_lock.coverage" NAME="do_lock Coverage Results" MODIFIED="1530495679306" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/LearningProject$BackupToZip.coverage" NAME="BackupToZip Coverage Results" MODIFIED="1532500699694" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/WorkingProject" />
-    <SUITE FILE_PATH="coverage/LearningProject$Temp.coverage" NAME="Temp Coverage Results" MODIFIED="1532510868083" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/WorkingProject" />
-    <SUITE FILE_PATH="coverage/LearningProject$hello_gui.coverage" NAME="hello_gui Coverage Results" MODIFIED="1530671101570" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/LearningProject$Regex.coverage" NAME="Regex Coverage Results" MODIFIED="1531986971784" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/LearningProject$test.coverage" NAME="test Coverage Results" MODIFIED="1530860617023" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/LearningProject$Douban_top_250II.coverage" NAME="Douban_top_250II Coverage Results" MODIFIED="1531384684811" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/LearningProject$StringIO.coverage" NAME="StringIO Coverage Results" MODIFIED="1529633796749" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/LearningProject$r_json.coverage" NAME="r_json Coverage Results" MODIFIED="1531723718696" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/LearningProject$Hello_Python.coverage" NAME="Hello Python Coverage Results" MODIFIED="1527145746569" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/LearningProject$multi_threading.coverage" NAME="multi_threading Coverage Results" MODIFIED="1530151890118" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/LearningProject$use_itertools.coverage" NAME="use_itertools Coverage Results" MODIFIED="1530609448427" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/LearningProject$test_code.coverage" NAME="test_code Coverage Results" MODIFIED="1531452105180" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/LearningProject$check_code.coverage" NAME="check_code Coverage Results" MODIFIED="1528267176528" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/LearningProject$Douban_book_top250.coverage" NAME="Douban_book_top250 Coverage Results" MODIFIED="1531470280452" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/LearningProject$task_master.coverage" NAME="task_master Coverage Results" MODIFIED="1530500773016" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/LearningProject$hello_world.coverage" NAME="hello world Coverage Results" MODIFIED="1526365030195" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/LearningProject$use_collection.coverage" NAME="use_collection Coverage Results" MODIFIED="1530521754534" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/LearningProject$OS.coverage" NAME="OS Coverage Results" MODIFIED="1531991519918" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/LearningProject$multi_processing.coverage" NAME="multi_processing Coverage Results" MODIFIED="1530153781965" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/LearningProject$Open_read.coverage" NAME="Open_read Coverage Results" MODIFIED="1532072407961" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/LearningProject$Music_163.coverage" NAME="Music_163 Coverage Results" MODIFIED="1531466616225" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/LearningProject$do_PyMySQL.coverage" NAME="do_PyMySQL Coverage Results" MODIFIED="1530869421137" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/LearningProject$do_mysql.coverage" NAME="do_mysql Coverage Results" MODIFIED="1530860087459" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/LearningProject$pprint.coverage" NAME="pprint Coverage Results" MODIFIED="1532078268055" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/LearningProject$OS_write.coverage" NAME="OS_write Coverage Results" MODIFIED="1532404763608" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/WorkingProject" />
-    <SUITE FILE_PATH="coverage/LearningProject$check_bmp.coverage" NAME="check_bmp Coverage Results" MODIFIED="1530589810902" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/LearningProject$do_subprocess.coverage" NAME="do_subprocess Coverage Results" MODIFIED="1530256244152" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/LearningProject$Vgtime_eval.coverage" NAME="Vgtime_eval Coverage Results" MODIFIED="1531476681701" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/LearningProject$Douban_top_250III.coverage" NAME="Douban_top_250III Coverage Results" MODIFIED="1531385407791" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/LearningProject$IO.coverage" NAME="IO Coverage Results" MODIFIED="1529655760248" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/LearningProject$Object_Oriented_Programming.coverage" NAME="Object Oriented Programming Coverage Results" MODIFIED="1528282556265" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/LearningProject$OS_path.coverage" NAME="OS_path Coverage Results" MODIFIED="1532054743059" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/LearningProject$use_pickle.coverage" NAME="use_pickle Coverage Results" MODIFIED="1529912466239" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/LearningProject$pooled_process.coverage" NAME="pooled_process Coverage Results" MODIFIED="1530176457060" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/LearningProject$Crawler.coverage" NAME="Crawler Coverage Results" MODIFIED="1531119726404" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/LearningProject$do_queue.coverage" NAME="do_queue Coverage Results" MODIFIED="1530257273429" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/LearningProject$Douban_top250_Second.coverage" NAME="Douban_top250_Second Coverage Results" MODIFIED="1531447751066" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/LearningProject$Hanoi.coverage" NAME="Hanoi Coverage Results" MODIFIED="1526025167553" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/LearningProject$use_datetime.coverage" NAME="use_datetime Coverage Results" MODIFIED="1530520654545" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/LearningProject$do_tcp.coverage" NAME="do_tcp Coverage Results" MODIFIED="1530686697060" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/LearningProject$Douban_top_250.coverage" NAME="Douban_top_250 Coverage Results" MODIFIED="1531367630344" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/LearningProject$BackupToZip.coverage" NAME="BackupToZip Coverage Results" MODIFIED="1532500699694" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/WorkingProject" />
+    <SUITE FILE_PATH="coverage/LearningProject$Temp.coverage" NAME="Temp Coverage Results" MODIFIED="1532659764438" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/WorkingProject" />
+    <SUITE FILE_PATH="coverage/LearningProject$hello_gui.coverage" NAME="hello_gui Coverage Results" MODIFIED="1530671101570" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/LearningProject$StringIO.coverage" NAME="StringIO Coverage Results" MODIFIED="1529633796749" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/LearningProject$r_json.coverage" NAME="r_json Coverage Results" MODIFIED="1531723718696" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/LearningProject$multi_threading.coverage" NAME="multi_threading Coverage Results" MODIFIED="1530151890118" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/LearningProject$BeautifulSoup.coverage" NAME="BeautifulSoup Coverage Results" MODIFIED="1532685624199" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/LearningProject$use_itertools.coverage" NAME="use_itertools Coverage Results" MODIFIED="1530609448427" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/LearningProject$task_master.coverage" NAME="task_master Coverage Results" MODIFIED="1530500773016" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/LearningProject$hello_world.coverage" NAME="hello world Coverage Results" MODIFIED="1526365030195" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/LearningProject$BeautifulSoup__1_.coverage" NAME="BeautifulSoup (1) Coverage Results" MODIFIED="1532664282251" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/WorkingProject" />
+    <SUITE FILE_PATH="coverage/LearningProject$DoubanSpider.coverage" NAME="DoubanSpider Coverage Results" MODIFIED="1532586984417" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/WorkingProject" />
+    <SUITE FILE_PATH="coverage/LearningProject$Music_163.coverage" NAME="Music_163 Coverage Results" MODIFIED="1531466616225" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/LearningProject$do_PyMySQL.coverage" NAME="do_PyMySQL Coverage Results" MODIFIED="1530869421137" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/LearningProject$pprint.coverage" NAME="pprint Coverage Results" MODIFIED="1532078268055" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/LearningProject$OS_write.coverage" NAME="OS_write Coverage Results" MODIFIED="1532404763608" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/WorkingProject" />
+    <SUITE FILE_PATH="coverage/LearningProject$check_bmp.coverage" NAME="check_bmp Coverage Results" MODIFIED="1530589810902" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/LearningProject$Douban_top_250III.coverage" NAME="Douban_top_250III Coverage Results" MODIFIED="1531385407791" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/LearningProject$Object_Oriented_Programming.coverage" NAME="Object Oriented Programming Coverage Results" MODIFIED="1528282556265" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/LearningProject$OS_path.coverage" NAME="OS_path Coverage Results" MODIFIED="1532054743059" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/LearningProject$BeautifulSoup_4_Object.coverage" NAME="BeautifulSoup_4_Object Coverage Results" MODIFIED="1532675688976" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/LearningProject$use_pickle.coverage" NAME="use_pickle Coverage Results" MODIFIED="1529912466239" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/LearningProject$pooled_process.coverage" NAME="pooled_process Coverage Results" MODIFIED="1530176457060" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/LearningProject$do_queue.coverage" NAME="do_queue Coverage Results" MODIFIED="1530257273429" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/LearningProject$use_threadlocal.coverage" NAME="use_threadlocal Coverage Results" MODIFIED="1530495859815" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/LearningProject$use_hashlib.coverage" NAME="use_hashlib Coverage Results" MODIFIED="1531127922887" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/LearningProject$Games_top.coverage" NAME="Games_top Coverage Results" MODIFIED="1532079892940" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/LearningProject$Douban_top_250.coverage" NAME="Douban_top_250 Coverage Results" MODIFIED="1531367630344" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/LearningProject$ChangeDateStyle.coverage" NAME="ChangeDateStyle Coverage Results" MODIFIED="1532491486049" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/WorkingProject" />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Douban_top_250III.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Douban_top_250III.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="522">
-              <caret line="31" column="44" selection-start-line="31" selection-start-column="44" selection-end-line="31" selection-end-column="44" />
-              <folding>
-                <element signature="e#48#63#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="Games_top.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Games_top.py">
           <provider selected="true" editor-type-id="text-editor">
@@ -94,38 +82,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="pprint.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pprint.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="108">
-              <caret line="6" column="20" selection-start-line="6" selection-start-column="20" selection-end-line="6" selection-end-column="20" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="OS_path.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/OS_path.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret selection-end-line="1" selection-end-column="23" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="Find_matches.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Find_matches.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="270">
               <caret line="15" column="29" selection-start-line="15" selection-start-column="29" selection-end-line="15" selection-end-column="29" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Regex.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Regex.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="342">
-              <caret line="19" column="18" selection-start-line="19" selection-start-column="18" selection-end-line="19" selection-end-column="18" />
             </state>
           </provider>
         </entry>
@@ -148,20 +109,44 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Temp.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Temp.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/WorkingProject/Temp.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="486">
-              <caret line="27" column="8" lean-forward="true" selection-start-line="27" selection-start-column="8" selection-end-line="27" selection-end-column="8" />
+            <state relative-caret-position="234">
+              <caret line="13" column="24" selection-start-line="13" selection-start-column="24" selection-end-line="13" selection-end-column="24" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BackupToZip.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/WorkingProject/BackupToZip.py">
+      <file leaf-file-name="DoubanSpider.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/WorkingProject/DoubanSpider.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="13" column="17" lean-forward="true" selection-start-line="13" selection-start-column="17" selection-end-line="13" selection-end-column="17" />
+            <state relative-caret-position="198">
+              <caret line="11" column="20" selection-start-line="11" selection-start-column="20" selection-end-line="11" selection-end-column="20" />
+              <folding>
+                <element signature="e#48#63#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BeautifulSoup.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/WorkingProject/BeautifulSoup.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="728">
+              <caret line="85" lean-forward="true" selection-start-line="85" selection-end-line="85" />
+              <folding>
+                <element signature="e#48#77#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BeautifulSoup_4_Object.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/BeautifulSoup_4_Object.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="360">
+              <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
             </state>
           </provider>
         </entry>
@@ -191,10 +176,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/hello world.py" />
-        <option value="$PROJECT_DIR$/check_code.py" />
-        <option value="$PROJECT_DIR$/Hello Python.py" />
-        <option value="$PROJECT_DIR$/Object Oriented Programming.py" />
         <option value="$PROJECT_DIR$/test_code.py" />
         <option value="$PROJECT_DIR$/StringIO.py" />
         <option value="$PROJECT_DIR$/IO.py" />
@@ -241,7 +222,11 @@
         <option value="$PROJECT_DIR$/WorkingProject/OS_write.py" />
         <option value="$PROJECT_DIR$/WorkingProject/ChangeDateStyle.py" />
         <option value="$PROJECT_DIR$/WorkingProject/BackupToZip.py" />
+        <option value="$PROJECT_DIR$/BeautifulSoup.py" />
         <option value="$PROJECT_DIR$/WorkingProject/Temp.py" />
+        <option value="$PROJECT_DIR$/WorkingProject/DoubanSpider.py" />
+        <option value="$PROJECT_DIR$/BeautifulSoup_4_Object.py" />
+        <option value="$PROJECT_DIR$/WorkingProject/BeautifulSoup.py" />
       </list>
     </option>
   </component>
@@ -254,7 +239,7 @@
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths />
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
     <option name="width" value="1936" />
@@ -301,6 +286,11 @@
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\GItHub\Python\LearningProject\WorkingProject" />
+    </key>
+  </component>
   <component name="RunDashboard">
     <option name="ruleStates">
       <list>
@@ -313,8 +303,8 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.Temp">
-    <configuration name="BackupToZip" type="PythonConfigurationType" factoryName="Python" temporary="true">
+  <component name="RunManager" selected="Python.BeautifulSoup">
+    <configuration name="BeautifulSoup (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="LearningProject" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -327,32 +317,13 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/WorkingProject/BackupToZip.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/WorkingProject/BeautifulSoup.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
-    <configuration name="ChangeDateStyle" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="LearningProject" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/WorkingProject" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/WorkingProject/ChangeDateStyle.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-    </configuration>
-    <configuration name="Games_top" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="BeautifulSoup" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="LearningProject" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -365,13 +336,32 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Games_top.py" />
+      <option name="SCRIPT_NAME" value="D:\GItHub\Python\LearningProject\WorkingProject\BeautifulSoup.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
-    <configuration name="OS_write" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="BeautifulSoup_4_Object" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="LearningProject" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/BeautifulSoup_4_Object.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
+    <configuration name="DoubanSpider" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="LearningProject" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -384,7 +374,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/WorkingProject/OS_write.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/WorkingProject/DoubanSpider.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -430,19 +420,19 @@
     </configuration>
     <list>
       <item itemvalue="Python.test_code" />
-      <item itemvalue="Python.Games_top" />
-      <item itemvalue="Python.OS_write" />
-      <item itemvalue="Python.ChangeDateStyle" />
       <item itemvalue="Python.Temp" />
-      <item itemvalue="Python.BackupToZip" />
+      <item itemvalue="Python.DoubanSpider" />
+      <item itemvalue="Python.BeautifulSoup" />
+      <item itemvalue="Python.BeautifulSoup_4_Object" />
+      <item itemvalue="Python.BeautifulSoup (1)" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.BeautifulSoup" />
+        <item itemvalue="Python.BeautifulSoup_4_Object" />
+        <item itemvalue="Python.BeautifulSoup (1)" />
         <item itemvalue="Python.Temp" />
-        <item itemvalue="Python.BackupToZip" />
-        <item itemvalue="Python.ChangeDateStyle" />
-        <item itemvalue="Python.OS_write" />
-        <item itemvalue="Python.Games_top" />
+        <item itemvalue="Python.DoubanSpider" />
       </list>
     </recent_temporary>
   </component>
@@ -460,7 +450,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="0" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Event Log" order="13" sideWeight="0.13854167" side_tool="true" weight="0.25957447" />
@@ -547,55 +537,10 @@
           </properties>
         </breakpoint>
       </default-breakpoints>
-      <option name="time" value="103" />
+      <option name="time" value="105" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/IO.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="438">
-          <caret line="48" column="16" selection-start-line="48" selection-start-column="16" selection-end-line="48" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/Python36-32/Lib/multiprocessing/context.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="155">
-          <caret line="116" selection-start-line="116" selection-end-line="116" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/do_queue.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="25" column="26" lean-forward="true" selection-start-line="25" selection-start-column="26" selection-end-line="25" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/multi_processing.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="17" column="31" selection-start-line="17" selection-start-column="31" selection-end-line="17" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pooled_process.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-line="2" />
-          <folding>
-            <element signature="e#48#80#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/do_subprocess.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="12" column="29" selection-start-line="12" selection-start-column="29" selection-end-line="12" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/task_master.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="450">
@@ -736,13 +681,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Douban_top_250II.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="23" column="40" selection-start-line="23" selection-start-column="40" selection-end-line="23" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Music_163.py" />
     <entry file="file://$PROJECT_DIR$/Zhihu.py" />
     <entry file="file://$PROJECT_DIR$/use_hashlib.py">
@@ -812,33 +750,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="522">
           <caret line="31" column="44" selection-start-line="31" selection-start-column="44" selection-end-line="31" selection-end-column="44" />
-          <folding>
-            <element signature="e#48#63#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pprint.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="6" column="20" selection-start-line="6" selection-start-column="20" selection-end-line="6" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Games_top.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="17" column="52" selection-start-line="17" selection-start-column="52" selection-end-line="17" selection-end-column="52" />
-          <folding>
-            <element signature="e#48#63#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/OS_path.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-line="1" selection-end-column="23" />
         </state>
       </provider>
     </entry>
@@ -863,17 +774,41 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/WorkingProject/OS_write.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="1" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pprint.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="6" column="20" selection-start-line="6" selection-start-column="20" selection-end-line="6" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OS_path.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="1" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Games_top.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="17" column="52" selection-start-line="17" selection-start-column="52" selection-end-line="17" selection-end-column="52" />
+          <folding>
+            <element signature="e#48#63#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Regex.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="342">
           <caret line="19" column="18" selection-start-line="19" selection-start-column="18" selection-end-line="19" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WorkingProject/BackupToZip.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="13" column="17" lean-forward="true" selection-start-line="13" selection-start-column="17" selection-end-line="13" selection-end-column="17" />
         </state>
       </provider>
     </entry>
@@ -884,6 +819,34 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Douban_top_250II.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="432">
+          <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Python36-32/Lib/site-packages/bs4/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-702">
+          <caret line="180" selection-start-line="180" selection-end-line="180" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WorkingProject/BackupToZip.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-6">
+          <caret selection-end-line="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WorkingProject/Temp.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="13" column="24" selection-start-line="13" selection-start-column="24" selection-end-line="13" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/WorkingProject/ChangeDateStyle.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="378">
@@ -891,17 +854,44 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/WorkingProject/OS_write.py">
+    <entry file="file://C:/Python36-32/Lib/abc.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-line="1" selection-end-column="23" />
+        <state relative-caret-position="322">
+          <caret line="188" selection-start-line="188" selection-end-line="188" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/WorkingProject/Temp.py">
+    <entry file="file://C:/Python36-32/Lib/site-packages/bs4/element.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="486">
-          <caret line="27" column="8" lean-forward="true" selection-start-line="27" selection-start-column="8" selection-end-line="27" selection-end-column="8" />
+        <state relative-caret-position="350">
+          <caret line="1614" selection-start-line="1614" selection-end-line="1614" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WorkingProject/DoubanSpider.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="11" column="20" selection-start-line="11" selection-start-column="20" selection-end-line="11" selection-end-column="20" />
+          <folding>
+            <element signature="e#48#63#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WorkingProject/BeautifulSoup.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="728">
+          <caret line="85" lean-forward="true" selection-start-line="85" selection-end-line="85" />
+          <folding>
+            <element signature="e#48#77#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BeautifulSoup_4_Object.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
         </state>
       </provider>
     </entry>
