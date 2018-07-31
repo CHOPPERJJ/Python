@@ -117,11 +117,11 @@ soup = BeautifulSoup(html_doc, 'html.parser')
 # s4 = soup.find('p', 'story')
 # print(s4.find_previous_sibling('p'))
 
-# find_all_next()和find_next()使用方法
-s5 = soup.a
-print(s5)
-print(s5.find_all_next('a'))
-print(s5.find_next('p'))
+# # find_all_next()和find_next()使用方法
+# s5 = soup.a
+# print(s5)
+# print(s5.find_all_next('a'))
+# print(s5.find_next('p'))
 
 
 
