@@ -20,3 +20,14 @@ def parse(text):
         mydict['score'] = movie.find('span', class_ = 'rating_num').text
         quote = movie.find('span', class_ = 'inq')
         mydict['quote'] = quote.text if quote else None
+        star = movie.find('div', class_ = 'inq')
+        mydict['comment_num'] = star.find_all('span')[-1].text[:-1]
+        yield mydict
+
+def get_all():
+    for i in range(2):
+        url = 'https://movie.douban.com/top250?start={}&filter='.format(i * 25)
+        text = start_requests(url)
+        result = parse(text)
+        yield from result
+        
