@@ -15,13 +15,13 @@ def start_request(url):
 
 
 def get_info(rep):
-    datas = rep.json
-    for data in datas:
+    data = rep.json()
+    for datai in data:
         yield {
-            'project_name': data['full_name'],
-            'project_url': data['html_url'],
-            'project_api_url': data['url'],
-            'star_count': data['stargazers_count']
+            'project_name': datai['full_name'],
+            'project_url': datai['html_url'],
+            'project_api_url': datai['url'],
+            'star_count': datai['stargazers_count']
         }
 
 
@@ -42,6 +42,7 @@ def main():
         f.write(s)
     end = time.time()
     print(end - start)
+
 
 if __name__ == '__main__':
     main()
