@@ -15,13 +15,13 @@ def start_request(url):
 
 
 def get_info(rep):
-    datas = rep.json
-    for data in datas:
+    data = rep.json()
+    for datai in data:
         yield {
-            'project_name': data['full_name'],
-            'project_url': data['html_url'],
-            'project_api_url': data['url'],
-            'star_count': data['stargazers_count']
+            'project_name': datai['full_name'],
+            'project_url': datai['html_url'],
+            'project_api_url': datai['url'],
+            'star_count': datai['stargazers_count']
         }
 
 
@@ -35,13 +35,14 @@ def get_all():
 
 def main():
     start = time.time()
-    datas =list(get_all())
-    datas.sort(key=operator.itemgetter('star_count'), reverse = True)
-    s = json.dump(datas, indent=4, ensure_ascii=False)
-    with open('github.json', 'w', encoding='utf-8')as f:
+    data = list(get_all())
+    data.sort(key=operator.itemgetter('star_count'), reverse=True)
+    s = json.dumps(data, ensure_ascii=False, indent=4)
+    with open('github.json', 'w', encoding='utf-8') as f:
         f.write(s)
     end = time.time()
     print(end - start)
+
 
 if __name__ == '__main__':
     main()
