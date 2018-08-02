@@ -35,10 +35,10 @@ def get_all():
 
 def main():
     start = time.time()
-    datas =list(get_all())
-    datas.sort(key=operator.itemgetter('star_count'), reverse = True)
-    s = json.dump(datas, indent=4, ensure_ascii=False)
-    with open('github.json', 'w', encoding='utf-8')as f:
+    data = list(get_all())
+    data.sort(key=operator.itemgetter('star_count'), reverse=True)
+    s = json.dumps(data, ensure_ascii=False, indent=4)
+    with open('github.json', 'w', encoding='utf-8') as f:
         f.write(s)
     end = time.time()
     print(end - start)
