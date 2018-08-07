@@ -46,38 +46,55 @@ d1 = {'a': 1, 'b': 2, 'c': 3}
 # print(obj4)
 
 # DataFrame的使用例子
-data = {'state': ['Ohio', 'Ohio', 'Ohio', 'Nevada', 'Nevada'],
-        'year': [2000, 2001, 2002, 2001, 2002],
-        'pop': [1.5, 1.7, 3.6, 2.4, 2.9]}
-sdata = {'Ohio': 35000, 'Texas': 71000, 'Oregon': 16000, 'Utah': 5000}
-states = ['California', 'Ohio', 'Oregon', 'Texas']
-frame = DataFrame(data)
-print(frame)
+# data = {'state': ['Ohio', 'Ohio', 'Ohio', 'Nevada', 'Nevada'],
+#         'year': [2000, 2001, 2002, 2001, 2002],
+#         'pop': [1.5, 1.7, 3.6, 2.4, 2.9]}
+# sdata = {'Ohio': 35000, 'Texas': 71000, 'Oregon': 16000, 'Utah': 5000}
+# states = ['California', 'Ohio', 'Oregon', 'Texas']
+# frame = DataFrame(data)
+# print(frame)
+#
+# framed = DataFrame(data, columns=['year', 'state', 'pop'])
+# print(framed)
+#
+# frame2 = DataFrame(data, columns=['year', 'state', 'pop', 'debt'], index=['one', 'two', 'three', 'four', 'five'])
+# print(frame2)
+#
+# # 列的位置捕获
+# ff = frame2.state
+# print(ff)
+#
+# # 行的位置捕获
+# ii = frame2.ix['three']
+# print(ii)
+#
+# # 给空的'debt'赋值
+# frame2['debt'] = [2, 4, 5, 5, 6]
+# print(frame2)
+# frame2['debt'] = np.arange(5.)
+# print(frame2)
+# val = Series([-1.2, -1.5, -1.7], index=['two', 'four', 'five'])
+# frame2['debt'] = val
+# print(val)
+# print(frame2)
+# frame2['eastern'] = frame2.state == 'Ohio'
+# print(frame2)
+# frame2['western'] = frame2.year == 2001
+# print(frame2)
 
-framed = DataFrame(data, columns=['year', 'state', 'pop'])
-print(framed)
+# # 嵌套字典（字典的字典）
+# pop = {'Nevada': {2001: 2.4, 2002: 2.9},
+#        'Ohio': {2000: 1.5, 2001: 1.7, 2002: 3.6}}
+# frame3 = DataFrame(pop)
+# print(frame3)
+# t = frame3.T
+# print(t)
+# frame4 = Series(pop)
+# print(frame4)
+# frame3.index.name = 'year'; frame3.columns.name = 'state'
+# print(frame3)
+# print(frame3.values)
+#
+# obj = Series(range(3), index=['a', 'b', 'c'])
+# index = obj.index
 
-frame2 = DataFrame(data, columns=['year', 'state', 'pop', 'debt'], index=['one', 'two', 'three', 'four', 'five'])
-print(frame2)
-
-# 列的位置捕获
-ff = frame2.state
-print(ff)
-
-# 行的位置捕获
-ii = frame2.ix['three']
-print(ii)
-
-# 给空的'debt'赋值
-frame2['debt'] = [2, 4, 5, 5, 6]
-print(frame2)
-frame2['debt'] = np.arange(5.)
-print(frame2)
-val = Series([-1.2, -1.5, -1.7], index=['two', 'four', 'five'])
-frame2['debt'] = val
-print(val)
-print(frame2)
-frame2['eastern'] = frame2.state == 'Ohio'
-print(frame2)
-frame2['western'] = frame2.year == 2001
-print(frame2)
