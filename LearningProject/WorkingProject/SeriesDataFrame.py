@@ -35,18 +35,24 @@ import numpy as np
 
 
 
-# drop方法返回一个在指定轴上删除了指定值的新对象（我也看不懂什么意思）
-obj = Series(np.arange(5), index=['a', 'b', 'c', 'd', 'e'])
-print(obj)
-new_obj = obj.drop('c') #索引和索引对象都删除了
-print(new_obj)
+# # drop方法返回一个在指定轴上删除了指定值的新对象（我也看不懂什么意思）
+# obj = Series(np.arange(5), index=['a', 'b', 'c', 'd', 'e'])
+# print(obj)
+# new_obj = obj.drop('c') #索引和索引对象都删除了
+# print(new_obj)
+#
+# # DataFrame可以删除任意轴上的索引值
+# data = DataFrame(np.arange(16).reshape((4, 4)),
+#                  index=['Ohio', 'Colorado', 'Utah', 'New York'],
+#                  columns=['one', 'two', 'three', 'four'])
+# print(data)
+# new_data = data.drop(['Colorado', 'Ohio'])
+# print(new_data)
+# new_data2 = data.drop('one', axis=1)
+# print(new_data2)
 
-# DataFrame可以删除任意轴上的索引值
-data = DataFrame(np.arange(16).reshape((4, 4)),
-                 index=['Ohio', 'Colorado', 'Utah', 'New York'],
-                 columns=['one', 'two', 'three', 'four'])
-print(data)
-new_data = data.drop(['Colorado', 'Ohio'])
-print(new_data)
-new_data2 = data.drop('one', axis=1)
-print(new_data2)
+
+# 索引选取和过滤，series的索引不是整数
+obj = Series(np.arange(4.), index=['a', 'b', 'c', 'd'])
+bb = obj['b']
+print(bb)
