@@ -52,7 +52,57 @@ import numpy as np
 # print(new_data2)
 
 
-# 索引选取和过滤，series的索引不是整数
-obj = Series(np.arange(4.), index=['a', 'b', 'c', 'd'])
-bb = obj['b']
-print(bb)
+
+# # 索引选取和过滤，series的索引不是整数
+# obj = Series(np.arange(4.), index=['a', 'b', 'c', 'd'])
+# bb = obj['b']
+# print(bb)
+
+# # DataFrame行上进行索引，使用引用字段ix
+# data = DataFrame(np.arange(16).reshape((4, 4)),
+#                  index=['Ohio', 'Colorado', 'Utah', 'New York'],
+#                  columns=['one', 'two', 'three', 'four'])
+# print(data)
+# data1 = data.ix['Colorado', ['two', 'three']]
+# print(data1)
+# data2 = data.ix[['Colorado', 'Utah'], ['two', 'three']]
+# print(data2)
+# data3 = data.ix[2]
+# print(data3)
+# data4 = data.ix[:'Utah', 'two']
+# print(data4)
+
+
+
+
+# # 算数运算和数据对齐
+# s1 = Series([7.3, -2.5, 3.4, 1.5], index=['a', 'c', 'd', 'e'])
+# s2 = Series([-2.1, 3.6, -1.5, 4, 3.1], index=['a', 'c', 'e', 'f', 'g'])
+# print(s1 + s2)
+#
+# # DataFrame的对齐操作会同时发生在行和列上
+# df1 = DataFrame(np.arange(12).reshape((3, 4)), columns=list('abcd'))
+# df2 = DataFrame(np.arange(20).reshape((4, 5)), columns=list('abcde'))
+# print(df2)
+# print(df1 + df2)
+# df3 = df1.add(df2, fill_value=0)
+# print(df3)
+# df4 = df1.reindex(columns=df2.columns, fill_value=0)
+# print(df4)
+
+# DataFrame 和 Series之间的运算
+arr = np.arange(12).reshape((3, 4))
+print(arr)
+print(arr - arr[0])
+frame = DataFrame(np.arange(12).reshape((4, 3)), columns=list('bde'),
+                  index=['Utah', 'Ohio', 'Texas', 'Oregon'])
+series = frame.ix[0]
+print(frame)
+print(series)
+print(frame - series)
+
+# 行上广播要使用算数云算法
+series3 = frame['d']
+print(series3)
+series4 = frame.sub(series3, axis=0)
+print(series4)
