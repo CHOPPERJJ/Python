@@ -90,19 +90,27 @@ import numpy as np
 # df4 = df1.reindex(columns=df2.columns, fill_value=0)
 # print(df4)
 
-# DataFrame 和 Series之间的运算
-arr = np.arange(12).reshape((3, 4))
-print(arr)
-print(arr - arr[0])
-frame = DataFrame(np.arange(12).reshape((4, 3)), columns=list('bde'),
-                  index=['Utah', 'Ohio', 'Texas', 'Oregon'])
-series = frame.ix[0]
-print(frame)
-print(series)
-print(frame - series)
+# # DataFrame 和 Series之间的运算
+# arr = np.arange(12).reshape((3, 4))
+# print(arr)
+# print(arr - arr[0])
+# frame = DataFrame(np.arange(12).reshape((4, 3)), columns=list('bde'),
+#                   index=['Utah', 'Ohio', 'Texas', 'Oregon'])
+# series = frame.ix[0]
+# print(frame)
+# print(series)
+# print(frame - series)
+#
+# # 行上广播要使用算数云算法
+# series3 = frame['d']
+# print(series3)
+# series4 = frame.sub(series3, axis=0)
+# print(series4)
 
-# 行上广播要使用算数云算法
-series3 = frame['d']
-print(series3)
-series4 = frame.sub(series3, axis=0)
-print(series4)
+
+
+
+# 函数应用和映射numpy的ufuncs元素数组方法
+frame = DataFrame(np.random.randn(4, 3), columns=list('bde'),
+                  index=['Utah', 'Ohio', 'Texas', 'Oregon'])
+print(frame)

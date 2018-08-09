@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
+# pandas基于Numpy构建的操作工具，也就是一个库
 
 import pandas as pd
 from pandas import Series
