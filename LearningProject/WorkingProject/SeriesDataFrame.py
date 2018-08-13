@@ -5,7 +5,6 @@ import pandas as pd
 from pandas import Series, DataFrame
 import numpy as np
 
-
 # # reindex重新索引，创建一个适应新索引的新对象
 # obj = Series([4.5, 7.2, -5.3, 3.6], index=['d', 'b', 'a', 'c'])
 # print(obj)
@@ -34,7 +33,6 @@ import numpy as np
 # print(frame5)
 
 
-
 # # drop方法返回一个在指定轴上删除了指定值的新对象（我也看不懂什么意思）
 # obj = Series(np.arange(5), index=['a', 'b', 'c', 'd', 'e'])
 # print(obj)
@@ -50,7 +48,6 @@ import numpy as np
 # print(new_data)
 # new_data2 = data.drop('one', axis=1)
 # print(new_data2)
-
 
 
 # # 索引选取和过滤，series的索引不是整数
@@ -71,8 +68,6 @@ import numpy as np
 # print(data3)
 # data4 = data.ix[:'Utah', 'two']
 # print(data4)
-
-
 
 
 # # 算数运算和数据对齐
@@ -108,9 +103,28 @@ import numpy as np
 # print(series4)
 
 
+# # 函数应用和映射numpy的ufuncs元素数组方法
+# frame = DataFrame(np.random.randn(4, 3), columns=list('bde'),
+#                   index=['Utah', 'Ohio', 'Texas', 'Oregon'])
+# print(frame)
+#
+# # 传递给apply的函数还可以返回由多个值组成的Series
+# def f(x):
+#     return Series([x.min(), x.max()], index=['min', 'max'])
+# result = frame.apply(f)
+# print(result)
 
+# # 排序（sorting）函数
+# obj = Series(range(4), index=['d', 'a', 'b', 'c'])
+# s = obj.sort_values()
+# print(s)
+#
+# frame = DataFrame({'b': [4, 7, -3, 2], 'a': [0, 1, 0, 1]})
+# s1 = frame.sort_values(by='b')
+# print(s1)
+# s2 = frame
 
-# 函数应用和映射numpy的ufuncs元素数组方法
-frame = DataFrame(np.random.randn(4, 3), columns=list('bde'),
-                  index=['Utah', 'Ohio', 'Texas', 'Oregon'])
-print(frame)
+# 排名(rangking)函数
+obj = Series([7, -5, 7, 4, 2, 0, 4])
+r = obj.rank()
+print(r)
