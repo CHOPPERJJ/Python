@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
+# 如果要启动大量的子进程，可以用进程池的方式批量创建子进程
 
 from multiprocessing import Pool
 import os, time, random
@@ -19,6 +20,7 @@ if __name__ == '__main__':
     for i in range(5):
         p.apply_async(long_time_task, args=(i,))
     print('Waiting for all subprocesses done...')
+    # 等待所有子进程运行完毕后再进行剩下的部分
     p.close()
     p.join()
     print('All subprocesses done.')
