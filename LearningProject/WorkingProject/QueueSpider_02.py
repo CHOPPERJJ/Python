@@ -29,7 +29,8 @@ class Spider():
         self.thread_num = 10
         self.first_running = True
 
-    def parse_first(self):
+    # 解析一级页面的方法，放在线程队列th1中
+    def parse_first(self, url):
         print('crawling', url)
         r = requests.get(url)
         soup = BeautifulSoup(r.content, 'lxml')
@@ -46,6 +47,7 @@ class Spider():
         else:
             self.first_running = False
 
+    # 解析二级页面的方法，放在线程队列th2中
     def parse_second(self):
         while self.first_running or not self.qurl.empty():
             url = self.qurl.get()
@@ -53,14 +55,37 @@ class Spider():
             r = requests.get(url)
             soup = BeautifulSoup(r.content, 'lxml')
             mydict = {}
-            title = soup.find('div', property = 'v:itemreviewed')
+            title = soup.find('div', property='v:itemreviewed')
             mydict['title'] = title.text if title else None
-            duration = soup.find('span', property = 'v:runtime')
+            duration = soup.find('span', property='v:runtime')
             mydict['duration'] = duration.text if duration else None
-            time = soup.find('span', property = 'v:initialReleaseDate')
+            time = soup.find('span', property='v:initialReleaseDate')
             mydict['time'] = time.text if time else None
             self.data.append(mydict)
 
-@run_time
-def run(self):
-    ths = []
+
+    @run_time
+    def run(self):
+        ths = []
+
+        th1 = Thread(target=self.parse_first, args=(self.start_url,))
+        th1.start()
+        th1.join()
+
+        for _ in range(self.thread_num):
+            th = Thread(target=self.parse_second)
+            th.start()
+            th.join()
+
+        for th in ths:
+            th.join()
+
+        s = json.dumps(self.data, ensure_ascii=False, indent=4)
+        with open('top_th1.json', 'w', encoding='utf-8') as f:
+            f.write(s)
+
+        print('Data crawling is finished.')
+
+
+if __name__ == '__main__':
+    Spider().run()

@@ -2,6 +2,7 @@
 # -*- coding: utf-8 -*-
 
 import time, threading
+from time import sleep, ctime
 
 
 # 新线程执行代码
@@ -18,8 +19,22 @@ def loop():
 
 # MainThread主线程运行
 print('thread %s is running...' % threading.current_thread().name)
-# 创建实例子进程
+# 创建实例子线程
 t = threading.Thread(target=loop, name='LoopThread')
 t.start()
 t.join()
 print('thread %s ended.' % threading.current_thread().name)
+
+# 子类化的thread
+loops = (4, 2)
+
+
+class MyThread(threading.Thread):
+    def __init__(self, func, args, name=''):
+        threading.Thread.__init__(self)
+        self.name = name
+        self.func = func
+        self.args = args
+
+    def run(self):
+        self.func(*self.args)
