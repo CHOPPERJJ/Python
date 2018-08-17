@@ -40,9 +40,9 @@ class Spider():
             url = movie.find('div', class_='hd').a['href']
             self.qurl.put(url)
 
-        nextpage = soup.find('span', class_='next').a['href']
+        nextpage = soup.find('span', class_='next').a
         if nextpage:
-            nexturl = self.start_url + nextpage
+            nexturl = self.start_url + nextpage['href']
             self.parse_first(nexturl)
         else:
             self.first_running = False
