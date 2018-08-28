@@ -19,7 +19,6 @@ def run_time(func):
 
     return wrapper
 
-
 class Spider():
     def __init__(self):
         self.start_url = 'https://movie.douban.com/top250'
