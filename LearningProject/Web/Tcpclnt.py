@@ -25,7 +25,7 @@ from socket import *
 
 
 
-s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+s = socket(AF_INET, SOCK_STREAM)
 # 建立连接
 s.connect(('127.0.0.01', 9999))
 # 接收欢迎消息

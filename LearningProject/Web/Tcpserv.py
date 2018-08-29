@@ -29,8 +29,8 @@ from threading import Thread
 # tcpSerSock.close()
 
 
-s = socket(socket.AF_INET, socket.SOCK_STREAM)
-s.bind('127.0.0.1', 9999)
+s = socket(AF_INET, SOCK_STREAM)
+s.bind(('127.0.0.1', 9999))
 s.listen(5)
 print('waiting for connection...')
 
@@ -38,7 +38,7 @@ while True:
     sock, addr = s.accept()
     t = threading.Thread(target=tcplink, args=(sock, addr))
     t.start()
-    if not sock:
+    if not args:
         break
 
 def tcplink(sock, addr):
