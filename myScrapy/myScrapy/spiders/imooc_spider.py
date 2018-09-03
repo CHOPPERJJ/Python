@@ -24,4 +24,4 @@ class ImoocSpider(scrapy.Spider):
         content = response.xpath('//div[@class="course-brief"]/p/text()').extract_first()
         url = response.url
         print('标题：' + title)
-        print('地址：' + url )
+        print('地址：' + url)

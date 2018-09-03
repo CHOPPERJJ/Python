@@ -2,9 +2,11 @@
 # -*- coding: utf-8 -*-
 # Flask框架使用
 
-from flask import Flask, url_for
+from flask import Flask, url_for, redirect
 from flask import request
 from flask import render_template
+import os
+from werkzeug import secure_filename
 
 # app = Flask(__name__)
 
@@ -35,6 +37,7 @@ from flask import render_template
 #     app.run(debug=True)
 
 
+# 利用模板进行html的页面生成
 app = Flask(__name__)
 
 
@@ -59,3 +62,4 @@ def signin():
 
 if __name__ == '__main__':
     app.run(debug=True)
+
