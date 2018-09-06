@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
-from django.http import HttpRequest
+from django.http import HttpResponse
 
 
 def first_page(request):
-    return HttpRequest('hello world')
+    return HttpResponse('hello world')
