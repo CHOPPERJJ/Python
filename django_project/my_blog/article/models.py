@@ -13,6 +13,7 @@ class ArticlePost(models.Model):
     body = models.TextField()
     created = models.DateTimeField(default=timezone.now)
     updated = models.DateTimeField(auto_now=True)
+    # published = models.CharField(max_length=100)
 
     class Meta:
         ordering = ('-created',)
