@@ -2,12 +2,11 @@
 # -*- coding: utf-8 -*-
 import markdown
 
-from django.shortcuts import render
-from django.http import HttpResponse
-from .models import ArticlePost
 from django.shortcuts import render, redirect
-# from .forms import ArticlePostForm
-# from django.contrib.auth.models import User
+from .models import ArticlePost
+from .forms import ArticlePostForm
+from django.contrib.auth.models import User
+from django.http import HttpResponse
 
 
 # 主页视图
@@ -31,17 +30,18 @@ def article_detail(request, id):
 
 
 # 文章的视图
-# def article_create(request):
-#     if request.method == "POST":
-#         article_post_form = ArticlePostForm(data=request.POST)
-#         if article_post_form.is_valid():
-#             new_article = article_post_form.save(commit=False)
-#             new_article.author = User.objects.get(id=1)
-#             new_article.save()
-#             return redirect("article:article_list")
-#         else:
-#             return HttpResponse("表单内容错误，请重新填写。")
-#     else:
-#         article_post_form = ArticlePostForm()
-#         context = { 'article_post_form': article_post_form }
-#         return render(request, 'article/create.html', context)
+def article_create(request):
+    if request.method == 'POST':
+        article_post_form = ArticlePostForm(data=request.POST)
+        if article_post_form.is_valid():
+            new_article = article_post_form.save(commit=False)
+            new_article.author = User.objects.get(id=1)
+            new_article.save()
+            return redirect('article:article_list')
+        else:
+            return HttpResponse('表单内容有误，请重新填写')
+    else:
+        article_post_form = ArticlePostForm()
+        context = { 'article_post_form': article_post_form }
+        return render(request, 'article/create.html', context)
+
