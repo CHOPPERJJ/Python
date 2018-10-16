@@ -45,3 +45,10 @@ def article_create(request):
         context = { 'article_post_form': article_post_form }
         return render(request, 'article/create.html', context)
 
+
+# 删除的视图
+def article_delete(request, id):
+    article = ArticlePost.objects.get(id=id)
+    article.delete()
+    return redirect('article:article_list')
+
