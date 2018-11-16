@@ -24,6 +24,8 @@ class Post(models.Model):
     objects = models.Manager()        #默认的管理器
     published = PublishedManager()     #自定义管理器
 
+
+    构建URL
     def get_absolute_url(self):
         return reverse('blog:post_detail',
                        args=[self.publish.year,
