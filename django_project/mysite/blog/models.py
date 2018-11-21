@@ -1,6 +1,7 @@
 from django.db import models
 from django.utils import timezone
 from django.contrib.auth.models import User
+from django.urls import reverse
 
 
 # 增加自定义的管理器
@@ -19,13 +20,11 @@ class Post(models.Model):
     created = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now=True)
     status = models.CharField(max_length=10, choices=STATUS_CHOICES, default='draft')
-
-    # 自定义管理器
+    # 自定义管理器,很重要的设定
     objects = models.Manager()        #默认的管理器
     published = PublishedManager()     #自定义管理器
 
-
-    构建URL
+    # 构建URL
     def get_absolute_url(self):
         return reverse('blog:post_detail',
                        args=[self.publish.year,
