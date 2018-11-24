@@ -1,16 +1,28 @@
 from django.shortcuts import render, get_object_or_404
 from .models import Post
+from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 
 
 def post_list(request):
-    posts = Post.objects.all()
-    return render(request, 'blog/post/list.html', {'posts': posts})
+    object_list = Post.objects.all()
+    paginator = Paginator(object_list, 3)  # 每页显示3篇文章
+    page = request.GET.get('page')
+    try:
+        posts = paginator.page(page)
+    except PageNotAnInteger:
+        # 如果page参数不是一个整数就返回第一页
+        posts = paginator.page(1)
+    except EmptyPage:
+        # 如果页数超出总页数就返回最后一页
+        posts = paginator.page(paginator.num_pages)
+    return render(request, 'blog/post/list.html', {'page': page, 'posts': posts})
 
 
+# 显示单独一篇文章的视图函数
 def post_detail(request, year, month, day, post):
     post = get_object_or_404(Post, slug=post,
                                    status='published',
-                                   published__year=year,
-                                   published__month=month,
-                                   published__day=day)
+                                   publish__year=year,
+                                   publish__month=month,
+                                   publish__day=day)
     return render(request, 'blog/post/detail.html', {'post': post})
