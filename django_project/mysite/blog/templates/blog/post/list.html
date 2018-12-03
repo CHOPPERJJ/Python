@@ -13,8 +13,7 @@
         <p class="date">
             Published{{ post.publish }} by {{ post.author }} Created Time:{{ post.created }}
         </p>
-        {{ post.body|truncatewords:20|linebreaks }}
+        {{ post.body|truncatewords:30|linebreaks }}
     {% endfor %}
-    {% include "test_include.html" with posts='fuck' %}
-    {% include "pagination.html" %}
+    {% include "pagination.html" with page=page_obj %}
 {% endblock %}
