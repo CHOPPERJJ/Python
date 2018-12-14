@@ -26,11 +26,7 @@ class Post(models.Model):
 
     # 构建URL,reverse反向解析url0
     def get_absolute_url(self):
-        return reverse('blog:post_detail',
-                       args=[self.publish.year,
-                             self.publish.month,
-                             self.publish.day,
-                             self.slug])
+        return reverse('blog:post_detail', args=[self.publish.year, self.publish.month, self.publish.day, self.slug])
 
     class Meta:
         ordering = ('-publish',)

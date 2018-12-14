@@ -29,11 +29,7 @@ class PostListView(ListView):
 
 # 显示单独一篇文章的视图函数
 def post_detail(request, year, month, day, post):
-    post = get_object_or_404(Post, slug=post,
-                                   status='published',
-                                   publish__year=year,
-                                   publish__month=month,
-                                   publish__day=day)
+    post = get_object_or_404(Post, slug=post, status='published', publish__year=year,  publish__month=month, publish__day=day)
     return render(request, 'blog/post/detail.html', {'post': post})
 
 
@@ -41,9 +37,10 @@ def post_share(request, post_id):
     # 通过id获取post对象
     post = get_object_or_404(Post, id=post_id, status='published')
     sent = False
+
     if request.method == 'POST':
         # 表单被提交
-        from = EmailPostForm(request.POST)
+        form = EmailPostForm(request.POST)
         if form.is_valid():
             # 验证表单数据
             cd = form.cleaned_data
