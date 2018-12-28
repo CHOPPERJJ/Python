@@ -4,6 +4,7 @@
 from django.db import models
 from django.contrib.auth.models import User
 from django.utils import timezone
+from django.urls import reverse
 
 
 # # 自定义模型管理器
@@ -29,4 +30,5 @@ class ArticlePost(models.Model):
     def __str__(self):
         return self.title
 
-
+    def get_absolute_url(self):
+        return reverse('article:article_detail', kwargs={'id': 1})
