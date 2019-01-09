@@ -4,7 +4,7 @@ from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from django.template import Context, Template
 from django.views.generic import ListView
 from .forms import EmailPostForm
-
+from django.core.mail import send_mail
 
 # django内置CBV类ListView改写post_list
 class PostListView(ListView):
@@ -39,6 +39,7 @@ def post_detail(request, year, month, day, post):
     return render(request, 'blog/post/detail.html', {'post': post})
 
 
+# 文章表单分享视图界面
 def post_share(request, post_id):
     # 通过id获取post对象
     post = get_object_or_404(Post, id=post_id, status='published')
@@ -54,9 +55,10 @@ def post_share(request, post_id):
             post_url = request.build_absolute_uri(post.get_absolute_url())
             subject = '{} ({}) recommends you reading "{}"'.format(cd['name'], cd['email'], post.title)
             message = 'Read "{}" at {}\n\n{}\'s comment:{}'.format(post.title, post_url, cd['name'], cd['comments'])
-            send_mail(subject, message, 'chopper_jj@outlook.com', [cd['to']])
+            send_mail(subject, message, 'chopper_jj@sina.cn', [['to']])
             sent = True
 
     else:
         form = EmailPostForm()
     return render(request, 'blog/post/share.html', {'post': post, 'form': form, 'sent': sent})
+
