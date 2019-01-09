@@ -28,6 +28,7 @@ class PostListView(ListView):
 
 
 # 显示单独一篇文章的视图函数
+
 def post_detail(request, year, month, day, post):
     post = get_object_or_404(Post,
                              status='published',
