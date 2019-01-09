@@ -131,8 +131,8 @@ STATIC_URL = '/static/'
 
 
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
-EMAIL_HOST = 'smtp.sina.cn'
-EMAIL_HOST_USER = 'chopper_jj@sina.cn'
-EMAIL_HOST_PASSWORD = 'sina_3112152'
-EMAIL_PORT = 25
+EMAIL_HOST = 'smtp.qq.com'
+EMAIL_HOST_USER = 'chopper_jj@qq.com'
+EMAIL_HOST_PASSWORD = 'iuoyglrsvehzbhgg'
+EMAIL_PORT = 587
 EMAIL_USE_TLS = True
