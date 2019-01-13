@@ -56,7 +56,8 @@ def post_share(request, post_id):
             post_url = request.build_absolute_uri(post.get_absolute_url())
             subject = '{} ({}) 建议你阅读邮件 "{}"'.format(cd['name'], cd['email'], post.title)
             message = 'Read "{}" at {} \n\n {}\'s comments:{}'.format(post.title, post_url, cd['name'], cd['comments'])
-            send_mail(subject, message, 'chopper_jj@qq.com', [cd['to']])
+            recipients = [cd['to']]
+            send_mail(subject, message, 'chopper_jj@qq.com', recipients)
             sent = True
 
     else:
