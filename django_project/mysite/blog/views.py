@@ -1,9 +1,9 @@
 from django.shortcuts import render, get_object_or_404
-from .models import Post
+from .models import Post, Comment
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from django.template import Context, Template
 from django.views.generic import ListView
-from .forms import EmailPostForm
+from .forms import EmailPostForm, CommentForm
 from django.core.mail import send_mail
 
 # django内置CBV类ListView改写post_list
@@ -37,7 +37,28 @@ def post_detail(request, year, month, day, post):
                              # publish__day=day,
                              slug=post)
 
-    return render(request, 'blog/post/detail.html', {'post': post})
+    # 列出文章对应的动态评论
+    comments = post.comments.filter(active=Ture)
+
+    new_comment = None
+
+    if request.method == 'POST':
+        comment_form = CommentForm(data=request.POST)
+        if comment_form.is_valid():
+            # 创建表单对象，不保存在数据库中
+            new_comment = comment_for.save(commit=False)
+            # 指定评论给当前文章
+            new_comment.post = post
+            # 保存评论到数据库中
+            new_comment.save()
+    else:
+        comment_form = CommentForm()   #空表单
+    return render(request,
+                  'blog/post/detail.html',
+                  {'post': post,
+                   'comments': comments,
+                   'new_comment': new_comment,
+                   'comment_form': comment_form})
 
 
 # 文章表单分享视图界面
