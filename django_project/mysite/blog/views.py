@@ -5,6 +5,8 @@ from django.template import Context, Template
 from django.views.generic import ListView
 from .forms import EmailPostForm, CommentForm
 from django.core.mail import send_mail
+from taggit.models import Tag
+
 
 # django内置CBV类ListView改写post_list
 class PostListView(ListView):
@@ -38,7 +40,7 @@ def post_detail(request, year, month, day, post):
                              slug=post)
 
     # 列出文章对应的动态评论
-    comments = post.comments.filter(active=Ture)
+    comments = post.comments.filter(active=True)
 
     new_comment = None
 
@@ -46,7 +48,7 @@ def post_detail(request, year, month, day, post):
         comment_form = CommentForm(data=request.POST)
         if comment_form.is_valid():
             # 创建表单对象，不保存在数据库中
-            new_comment = comment_for.save(commit=False)
+            new_comment = comment_form.save(commit=False)
             # 指定评论给当前文章
             new_comment.post = post
             # 保存评论到数据库中
@@ -84,4 +86,7 @@ def post_share(request, post_id):
     else:
         form = EmailPostForm()
     return render(request, 'blog/post/share.html', {'post': post, 'form': form, 'sent': sent})
+
+
+def post_list(request, tag_slug=None):
 
