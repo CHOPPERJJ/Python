@@ -9,24 +9,31 @@ from taggit.models import Tag
 
 
 # django内置CBV类ListView改写post_list
-class PostListView(ListView):
-    queryset = Post.objects.all()
-    context_object_name = 'posts'   #posts为模板变量名称
-    paginate_by = 3
-    template_name = 'blog/post/list.html'
+# class PostListView(ListView):
+#     queryset = Post.objects.all()
+#     context_object_name = 'posts'   #posts为模板变量名称
+#     paginate_by = 3
+#     template_name = 'blog/post/list.html'
 
 
-# def post_list(request):
-#     object_list = Post.objects.all()
-#     paginator = Paginator(object_list, 3)
-#     page = request.GET.get('page')
-#     try:
-#         posts = paginator.page(page)
-#     except PageNotAnInteger:
-#         posts = paginator.page(1)
-#     except EmptyPage:
-#         posts = paginator.page(paginator.num_pages)
-#     return render(request, 'blog/post/list.html', {'page': page, 'posts': posts})
+def post_list(request, tag_slug=None):
+    object_list = Post.objects.all()
+    tag = None
+
+    if tag_slug:
+        tag = get_object_or_404(Tag, slug=tag_slug)
+        object_list = object_list.filter(tags__in=[tag])
+    paginator = Paginator(object_list, 3)
+    page = request.GET.get('page')
+    try:
+        posts = paginator.page(page)
+    except PageNotAnInteger:
+        # 如果页码不是整数，传入首页
+        posts = paginator.page(1)
+    except EmptyPage:
+        # 如果传入的页码超出了限制,传入最后一页
+        posts = paginator.page(paginator.num_pages)
+    return render(request, 'blog/post/list.html', {'page': page, 'posts': posts, 'tag': tag})
 
 
 # 显示单独一篇文章的视图函数
@@ -87,6 +94,4 @@ def post_share(request, post_id):
         form = EmailPostForm()
     return render(request, 'blog/post/share.html', {'post': post, 'form': form, 'sent': sent})
 
-
-def post_list(request, tag_slug=None):
 
