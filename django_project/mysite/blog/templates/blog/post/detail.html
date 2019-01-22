@@ -15,6 +15,16 @@
         <a href="{% url "blog:post_share" post.id %}"> Share this post</a>
     </p>
 
+<!--相似性查找文章-->
+<h2>Similar posts</h2>
+{% for post in similar_posts %}
+    <p>
+        <a href="{{ post.get_absolute_url }}">{{ post.title }}</a>
+    </p>
+{% empty %}
+    还没有相似的文章。
+{% endfor %}
+
 <!--评论html界面-->
 {% with comments.count as total_comments %}
     <h2>
