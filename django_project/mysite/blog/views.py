@@ -38,11 +38,11 @@ def post_list(request, tag_slug=None):
 
 
 # 显示单独一篇文章的视图函数
-def post_detail(request, year, month, day, post):
+def post_detail(request, year, month, days, post):
     post = get_object_or_404(Post,
                              status='published',
                              publish__year=year,
-                             publish__month=month,
+                             # publish__month=month,
                              # publish__day=day,
                              slug=post)
 
