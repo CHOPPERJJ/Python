@@ -22,9 +22,8 @@ class Post(models.Model):
     updated = models.DateTimeField(auto_now=True)
     status = models.CharField(max_length=10, choices=STATUS_CHOICES, default='draft')
     tags = TaggableManager()
-    # 自定义管理器,很重要的设定
-    # objects = models.Manager()        #默认的管理器
-    # published = PublishedManager()     #自定义管理器
+    objects = models.Manager()  # 默认的管理器
+    published = PublishedManager()  # 自定义管理器
 
     # 构建URL,reverse反向解析url
     def get_absolute_url(self):
