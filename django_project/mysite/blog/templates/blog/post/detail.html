@@ -16,7 +16,7 @@
     </p>
 
 <!--相似性查找文章-->
-<h2>Similar posts</h2>
+<h2>相似性文章</h2>
 {% for post in similar_posts %}
     <p>
         <a href="{{ post.get_absolute_url }}">{{ post.title }}</a>
@@ -32,6 +32,7 @@
     </h2>
 {% endwith %}
 
+<!--具体评论界面-->
 {% for comment in comments %}
     <div class="comment">
         <p class="info">
@@ -44,10 +45,11 @@
     <p>There are no comments yet.</p>
 {% endfor %}
 
+<!--添加评论界面-->
 {% if new_comments %}
     <h2>Your comments has been added.</h2>
 {% else %}
-    <h2>Add a new comment</h2>
+    <h2>添加新评论</h2>
     <form action="." method="post">
         {{ comment_form.as_p }}
         {% csrf_token %}
