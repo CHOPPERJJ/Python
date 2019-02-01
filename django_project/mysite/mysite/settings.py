@@ -81,19 +81,18 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 DATABASES = {
     'default': {
         # 配置用PostgreSQL数据库
-        'ENGINE': 'django.db.backends,postgresql',
-        'NAME': 'blog',
-        'USER': 'blog',
-        'PASSWORD' : '123456',
-
+        # 'ENGINE': 'django.db.backends,postgresql',
+        # 'NAME': 'blog',
+        # 'USER': 'blog',
+        # 'PASSWORD' : '123456',
 
         # 配置用msql数据库
-        # 'ENGINE': 'django.db.backends.mysql',
-        # 'NAME': 'chopper',
-        # 'USER': 'root',
-        # 'PASSWORD': '123456',
-        # 'HOST': 'localhost',
-        # 'PORT': '3306',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'chopper',
+        'USER': 'root',
+        'PASSWORD': '123456',
+        'HOST': 'localhost',
+        'PORT': '3306',
 
         # 配置用sqlite3数据库
         # 'ENGINE': 'django.db.backends.sqlite3',
