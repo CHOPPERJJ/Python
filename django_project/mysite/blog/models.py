@@ -3,7 +3,6 @@ from django.utils import timezone
 from django.contrib.auth.models import User
 from django.urls import reverse
 from taggit.managers import TaggableManager
-from django.contrib.postgres.search import SearchVector
 
 
 # 增加自定义的管理器

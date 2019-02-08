@@ -84,8 +84,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends,postgresql',
         'NAME': 'blog',
         'USER': 'blog',
-        'PASSWORD' : '123456',
-
+        'PASSWORD': '123456',
 
         # 配置用msql数据库
         # 'ENGINE': 'django.db.backends.mysql',
