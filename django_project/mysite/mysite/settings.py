@@ -25,7 +25,9 @@ SECRET_KEY = '5p*4c&yqm&p^ojsp%q98gf_y&cmk5rp7ke-7&#p3=ogu&@bc1k'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['120.78.134.138', 'localhost', '127.0.0.1']
+
+STATIC_ROOT = os.path.join(BASE_DIR, "static/")
 
 SITE_ID = 1
 # Application definition
